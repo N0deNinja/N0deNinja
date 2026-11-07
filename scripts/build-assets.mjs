@@ -626,6 +626,134 @@ function career() {
 }
 
 // ============================================================================
+// EXPERIENCE — vertical timeline with role details
+// ============================================================================
+function experience() {
+  const W = 1200;
+  const railX = 278, dateX = 250, textX = 314;
+  const companies = [
+    {
+      name: 'Piletilevi PLG', where: 'Prague · remote',
+      roles: [
+        {
+          title: 'Senior Full-Stack Developer, Mobile & Backend', dates: 'Jun 2026 – now', current: true,
+          bullets: [
+            'Own features from backend architecture and APIs through frontend and rollout',
+            'Build new backend services and extend existing systems for new capabilities',
+            'On-call rotation: resolve production incidents across backend and frontend',
+          ],
+          chips: ['TypeScript', 'Node.js', 'SQL', 'MongoDB', 'React Native'],
+        },
+        {
+          title: 'React Native Developer', dates: 'Jan 2025 – Jun 2026',
+          bullets: [
+            'Built a pipeline that turns Figma color tokens into fully typed code',
+            'Designed a typed component variant system that replaced complex conditionals',
+            'Migrated a large legacy JavaScript codebase to modern TypeScript',
+          ],
+          chips: ['React Native', 'Expo', 'TypeScript', 'Figma tokens'],
+        },
+      ],
+    },
+    {
+      name: 'Partners Banka', where: 'Prague · hybrid',
+      roles: [
+        {
+          title: 'Mobile Application Developer', dates: 'Feb 2023 – Jan 2025',
+          bullets: [
+            'Implemented card features with the cards team in React Native and iOS',
+            "Built an Apple Wallet extension with Apple's SDK for card tokenization",
+            'Delivered alongside QA, UI/UX and product owners',
+          ],
+          chips: ['React Native', 'iOS', 'Apple Wallet'],
+        },
+      ],
+    },
+  ];
+  const earlier = [
+    { title: 'Marketing Technology Specialist', dates: 'Jun 2022 – Feb 2023', line: 'Fortuna Entertainment Group · Google Tag Manager, Exponea (Bloomreach), analytics' },
+    { title: 'React Developer · Automated Testing', dates: 'May – Dec 2021', line: 'Onlio · React features and fixes with senior developers, Cypress test coverage' },
+  ];
+
+  let y = 70, body = '', css = '', k = 0;
+  const nodes = [];
+  const delay = () => (0.15 + k++ * 0.12).toFixed(2);
+
+  for (const co of companies) {
+    y += 40;
+    const d = delay();
+    body += `<g class="in" style="animation-delay:${d}s">
+<rect x="${railX - 7}" y="${y - 16}" width="14" height="14" rx="2" transform="rotate(45 ${railX} ${y - 9})" fill="${C.bgA}" stroke="${C.sub}" stroke-width="1.6"/>
+${sans(textX, y, co.name, 28, `fill="${C.text}" font-weight="700"`)}
+<text class="m" x="${W - 48}" y="${y - 4}" font-size="14" fill="${C.mute}" text-anchor="end">${esc(co.where)}</text>
+</g>`;
+    nodes.push(y - 9);
+    y += 14;
+    for (const r of co.roles) {
+      y += 34;
+      const dr = delay();
+      body += `<g class="in" style="animation-delay:${dr}s">
+${r.current ? `<circle class="pulse" cx="${railX}" cy="${y - 7}" r="9" fill="none" stroke="${C.cyan}" stroke-width="2"/>` : ''}
+<circle cx="${railX}" cy="${y - 7}" r="6.5" fill="${r.current ? C.cyan : C.bgA}" stroke="${C.cyan}" stroke-width="2"/>
+<text class="m" x="${dateX}" y="${y - 1}" font-size="15" fill="${r.current ? C.cyanLite : C.sub}" text-anchor="end">${esc(r.dates)}</text>
+${r.current ? `<rect x="${dateX - 74}" y="${y + 12}" width="74" height="22" rx="11" fill="${C.cyan}" fill-opacity=".1" stroke="${C.cyan}" stroke-opacity=".5"/><text class="m" x="${dateX - 37}" y="${y + 27}" font-size="11.5" font-weight="700" fill="${C.cyan}" text-anchor="middle" letter-spacing="1.5">CURRENT</text>` : ''}
+${sans(textX, y, r.title, 21, `fill="${r.current ? C.cyanLite : C.text}" font-weight="650"`)}`;
+      y += 8;
+      for (const b of r.bullets) {
+        y += 31;
+        body += `<path d="M${textX + 2} ${y - 11} l6 5 l-6 5" fill="none" stroke="${C.cyan}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+${sans(textX + 22, y, b, 18, `fill="${C.sub}"`)}`;
+      }
+      y += 18;
+      let cx = textX;
+      for (const c of r.chips) {
+        const w = monoW(c, 14) + 22;
+        body += `<rect x="${cx}" y="${y}" width="${w}" height="28" rx="7" fill="${C.panel}" stroke="${C.line2}"/>${mono(cx + 11, y + 19, c, 14, `fill="#c9d4e3"`)}`;
+        cx += w + 8;
+      }
+      body += `</g>`;
+      nodes.push(y);
+      y += 28 + 14;
+    }
+  }
+  // earlier roles, compact
+  y += 34;
+  const solidEnd = y - 24;
+  body += `<g class="in" style="animation-delay:${delay()}s">${mono(textX, y, 'EARLIER', 13, `fill="${C.mute}" letter-spacing="3"`)}</g>`;
+  for (const e of earlier) {
+    y += 42;
+    body += `<g class="in" style="animation-delay:${delay()}s">
+<circle cx="${railX}" cy="${y - 6}" r="5" fill="${C.bgA}" stroke="${C.mute}" stroke-width="1.8"/>
+<text class="m" x="${dateX}" y="${y - 1}" font-size="14" fill="${C.mute}" text-anchor="end">${esc(e.dates)}</text>
+${sans(textX, y, e.title, 19, `fill="${C.text}" font-weight="600"`)}
+${sans(textX, y + 26, e.line, 16, `fill="${C.mute}"`)}
+</g>`;
+    y += 26;
+  }
+  const railTop = 70 + 40 - 9, railEnd = y - 26 - 6;
+  const H = y + 40;
+  const rail = `<path class="rail" d="M${railX} ${railTop} V${solidEnd}" pathLength="1" stroke="${C.line2}" stroke-width="2" fill="none"/>
+<path d="M${railX} ${solidEnd} V${railEnd}" stroke="${C.line2}" stroke-width="2" stroke-dasharray="3 6" fill="none"/>`;
+  css += `
+.rail{stroke-dasharray:1 1;stroke-dashoffset:1;animation:draw 1.4s cubic-bezier(.3,.6,.2,1) .1s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.in{animation:in .6s ease-out both}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out 1.2s infinite both}
+@keyframes pulse{0%{transform:scale(.7);opacity:1}100%{transform:scale(1.9);opacity:0}}
+@media (prefers-reduced-motion: reduce){.rail{stroke-dashoffset:0}}`;
+
+  const f = frame({ w: W, h: H, tab: 'experience.log', tabIcon: 'log', right: '// newest first' });
+  return svgDoc({
+    w: W, h: H,
+    title: 'Experience',
+    desc: 'Piletilevi PLG: Senior Full-Stack Developer, Mobile and Backend, since June 2026; React Native Developer, January 2025 to June 2026. Partners Banka: Mobile Application Developer, February 2023 to January 2025. Earlier: Fortuna Entertainment Group, Marketing Technology Specialist, 2022 to 2023; Onlio, React Developer and automated testing, 2021.',
+    style: css, defs: f.defs,
+    body: `${f.body}\n${rail}\n${body}`,
+  });
+}
+
+// ============================================================================
 // LINK BUTTONS
 // ============================================================================
 function button(label, glyph) {
@@ -647,5 +775,6 @@ save('stack.svg', stack());
 save('workflow.svg', workflow());
 save('retake.svg', retake());
 save('career.svg', career());
+save('experience.svg', experience());
 save('link-portfolio.svg', button('DVORAKSTUDIO.DEV', 'globe'));
 save('link-linkedin.svg', button('LINKEDIN', 'in'));

@@ -20,10 +20,15 @@ Outside work I like taking unfamiliar systems apart to see how they behave: game
   <img src="assets/career.svg" width="100%" alt="Career timeline: Onlio, React and QA, 2021. Fortuna Entertainment Group, marketing technology, 2022 to 2023. Partners Banka, mobile with React Native, 2023 to 2025. Piletilevi PLG, React Native Developer 2025 to 2026, then Senior Full-Stack Developer from June 2026.">
 </p>
 
-### Piletilevi PLG
-<sub>Prague, remote · Jan 2025 – present</sub>
+<p align="center">
+  <img src="assets/experience.svg" width="100%" alt="Experience. Piletilevi PLG, Prague, remote: Senior Full-Stack Developer, Mobile and Backend, since June 2026, owning features from backend architecture and APIs through frontend and rollout, building backend services, and on call for production incidents; React Native Developer, January 2025 to June 2026, with a Figma color token pipeline, a typed component variant system and a JavaScript to TypeScript migration. Partners Banka, Prague, hybrid: Mobile Application Developer, February 2023 to January 2025, card features in React Native and iOS and an Apple Wallet extension for card tokenization. Earlier: Fortuna Entertainment Group, Marketing Technology Specialist, 2022 to 2023; Onlio, React Developer and automated testing, 2021.">
+</p>
 
-**Senior Full-Stack Developer, Mobile & Backend** · Jun 2026 – present
+<details>
+<summary><b>Full role descriptions</b></summary>
+<br>
+
+**Senior Full-Stack Developer, Mobile & Backend** · Piletilevi PLG · Jun 2026 – present
 
 A full-stack role with growing ownership of backend architecture, production systems and end-to-end delivery.
 
@@ -33,24 +38,17 @@ A full-stack role with growing ownership of backend architecture, production sys
 - Part of the on-call rotation: respond to production incidents and ship reliable fixes under time pressure
 - Work with product and engineering to turn requirements into maintainable, production-ready solutions
 
-**React Native Developer** · Jan 2025 – Jun 2026
+**React Native Developer** · Piletilevi PLG · Jan 2025 – Jun 2026
 
 - Built an automation pipeline that converts Figma color tokens into fully typed code objects, removing manual color-mapping errors
 - Designed a strongly typed component variant system, so UI changes became configuration of reusable variants instead of complex conditionals
 - Refactored a large legacy JavaScript codebase into modern TypeScript, improving long-term stability and developer productivity
 
-### Partners Banka
-<sub>Prague, hybrid · Feb 2023 – Jan 2025</sub>
-
-**Mobile Application Developer**
+**Mobile Application Developer** · Partners Banka · Feb 2023 – Jan 2025
 
 - Implemented card features as part of the cards team, in React Native and iOS
 - Developed an Apple Wallet extension with Apple's SDK for a smoother card tokenization flow
 - Worked with QA, UI/UX and product owners to ship features smoothly
-
-<details>
-<summary><b>Earlier roles</b> · Fortuna Entertainment Group, Onlio · 2021 – 2023</summary>
-<br>
 
 **Marketing Technology Specialist** · Fortuna Entertainment Group · Jun 2022 – Feb 2023
 
