@@ -71,7 +71,7 @@ ${mono(cx + 14, 367, c, 16, `fill="${C.cyanLite}"`)}`;
     { label: 'client' },
     { label: 'app', text: 'React Native · Expo · TypeScript' },
     { label: 'api', text: 'Node.js services · REST APIs' },
-    { label: 'data', text: 'SQL · Prisma · Drizzle' },
+    { label: 'data', text: 'SQL · MongoDB · Prisma' },
   ];
   const DOWN = bx + bw / 2 - 10, UP = bx + bw / 2 + 10;
 
@@ -182,8 +182,8 @@ function stack() {
   const groups = [
     { label: 'MOBILE', items: ['Expo Router', 'Reanimated', 'Skia', 'react-native-svg', 'Expo Image', 'Expo Video', 'Hermes', 'iOS', 'Android'] },
     { label: 'WEB', items: ['Next.js', 'JavaScript', 'HTML / CSS', 'Zustand', 'React Context', 'SWR'] },
-    { label: 'BACKEND & DATA', items: ['Fastify', 'REST APIs', 'SQL', 'Prisma', 'Drizzle ORM', 'SQLite'] },
-    { label: 'TOOLING', items: ['Git', 'GitHub', 'Linux', 'Docker'] },
+    { label: 'BACKEND & DATA', items: ['Fastify', 'REST APIs', 'SQL', 'MongoDB', 'Prisma', 'Drizzle ORM', 'SQLite'] },
+    { label: 'TOOLING', items: ['Git', 'GitHub', 'Linux', 'Docker', 'Cypress'] },
     { label: 'PERSONAL PROJECTS', note: 'explored outside work', dashed: true, items: ['C#', 'CounterStrikeSharp', 'Electron', 'Discord.js', 'Playwright', 'Unreal Engine', 'Blender'] },
   ];
 
@@ -563,6 +563,69 @@ ${panel}`;
 }
 
 // ============================================================================
+// CAREER TIMELINE
+// ============================================================================
+function career() {
+  const W = 1200, H = 244;
+  const start = 2021, years = 6;                 // Jan 2021 -> Jan 2027
+  const x = (y, m) => r1(48 + (((y - start) * 12 + (m - 1)) / (years * 12)) * 1104);
+  const barY = 126, barH = 12;
+  // [company, role, from [y, m], to [y, m] (exclusive), color, opacity]
+  const segs = [
+    ['Onlio', 'React · QA', [2021, 5], [2022, 1], C.cyan, 0.35],
+    ['Fortuna', 'MarTech', [2022, 6], [2023, 2], C.sub, 0.3],
+    ['Partners Banka', 'Mobile · React Native', [2023, 2], [2025, 1], C.cyan, 0.55],
+    ['Piletilevi PLG', 'React Native', [2025, 1], [2026, 6], C.cyan, 0.78],
+    [null, 'Senior Full-Stack', [2026, 6], [2027, 1], C.cyan, 1],
+  ];
+  // The current role runs up to the build date.
+  const today = new Date();
+  const nx = x(today.getUTCFullYear(), today.getUTCMonth() + 1 + today.getUTCDate() / 31);
+  let css = '', body = '';
+  segs.forEach(([company, role, a, b, color, op], i) => {
+    const last = i === segs.length - 1;
+    const x0 = x(...a), x1 = last ? nx : x(...b);
+    const d = (0.25 + i * 0.22).toFixed(2);
+    body += `<rect class="seg" style="animation-delay:${d}s" x="${x0}" y="${barY}" width="${r1(x1 - x0 - (last ? 0 : 3))}" height="${barH}" rx="6" fill="${last ? 'url(#now)' : color}" fill-opacity="${last ? 1 : op}"/>`;
+    body += `<g class="lab" style="animation-delay:${d}s">`;
+    if (company) body += sans(x0, barY - 16, company, 18, `fill="${C.text}" font-weight="650"`);
+    body += last
+      ? `<text class="m" x="${r1(x1 + 6)}" y="${barY + 38}" font-size="14" fill="${C.cyanLite}" text-anchor="end">${esc(role)}</text>`
+      : mono(x0, barY + 38, role, 14, `fill="${C.mute}"`);
+    body += `</g>`;
+  });
+  // year axis
+  const axisY = 196;
+  body += `<line x1="48" y1="${axisY}" x2="${W - 48}" y2="${axisY}" stroke="${C.line}"/>`;
+  for (let k = 0; k <= years; k++) {
+    const xx = x(start + k, 1);
+    const anchor = k === 0 ? 'start' : k === years ? 'end' : 'middle';
+    body += `<line x1="${xx}" y1="${axisY - 4}" x2="${xx}" y2="${axisY + 4}" stroke="${C.line2}"/>
+<text class="m" x="${xx}" y="${axisY + 26}" font-size="13" fill="${C.mute}" text-anchor="${anchor}">${start + k}</text>`;
+  }
+  // "now" marker at the build date
+  body += `<circle class="pulse" cx="${nx}" cy="${barY + barH / 2}" r="11" fill="none" stroke="${C.cyan}" stroke-width="2"/>
+<circle cx="${nx}" cy="${barY + barH / 2}" r="5" fill="#ffffff"/>`;
+  css += `
+.seg{transform-box:fill-box;transform-origin:left center;animation:grow .7s cubic-bezier(.2,.7,.2,1) both}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.lab{animation:fade .6s ease-out both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out 1.6s infinite both}
+@keyframes pulse{0%{transform:scale(.5);opacity:1}100%{transform:scale(1.6);opacity:0}}`;
+
+  const f = frame({ w: W, h: H, tab: 'career.log', tabIcon: 'log', right: '// since 2021' });
+  return svgDoc({
+    w: W, h: H,
+    title: 'Career timeline',
+    desc: 'Onlio, React and QA, 2021. Fortuna Entertainment Group, marketing technology, 2022 to 2023. Partners Banka, mobile with React Native, 2023 to 2025. Piletilevi PLG, React Native developer 2025 to 2026, then Senior Full-Stack Developer from June 2026.',
+    style: css,
+    defs: `${f.defs}<linearGradient id="now" x1="0" x2="1"><stop offset="0" stop-color="${C.cyan}"/><stop offset="1" stop-color="#7df0ff"/></linearGradient>`,
+    body: `${f.body}\n${body}`,
+  });
+}
+
+// ============================================================================
 // LINK BUTTONS
 // ============================================================================
 function button(label, glyph) {
@@ -583,5 +646,6 @@ save('hero.svg', hero());
 save('stack.svg', stack());
 save('workflow.svg', workflow());
 save('retake.svg', retake());
+save('career.svg', career());
 save('link-portfolio.svg', button('DVORAKSTUDIO.DEV', 'globe'));
 save('link-linkedin.svg', button('LINKEDIN', 'in'));

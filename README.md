@@ -10,63 +10,68 @@
   <a href="https://www.linkedin.com/in/georgedvorakdev/"><img src="assets/link-linkedin.svg" height="44" alt="LinkedIn"></a>
 </p>
 
-I build and maintain production React Native apps for iOS and Android in TypeScript, from the screen a user taps through to the API behind it. I started on the mobile side, and the work has grown into full-stack engineering: backend integrations, account and transaction flows, and the production issues that only show up on one platform.
+I build production mobile apps and the backend systems behind them. I've written React and React Native professionally since 2021: card features and an Apple Wallet extension for a bank, a large JavaScript-to-TypeScript migration, and now full-stack work where I own features from backend architecture to production rollout, on-call included.
 
 Outside work I like taking unfamiliar systems apart to see how they behave: game runtimes, replay and simulation tooling, and development workflows built around AI coding agents.
 
 ## Experience
 
-**Senior Full-Stack Developer** · 2025 – present
+<p align="center">
+  <img src="assets/career.svg" width="100%" alt="Career timeline: Onlio, React and QA, 2021. Fortuna Entertainment Group, marketing technology, 2022 to 2023. Partners Banka, mobile with React Native, 2023 to 2025. Piletilevi PLG, React Native Developer 2025 to 2026, then Senior Full-Stack Developer from June 2026.">
+</p>
 
-I work on production, cross-platform mobile apps that handle real commercial workflows: accounts and verification, purchases and discounts, reservations, and digital entitlements. I work with engineering, product and QA, and I'm part of production support and incident resolution.
+### Piletilevi PLG
+<sub>Prague, remote · Jan 2025 – present</sub>
 
-<table>
-<tr>
-<td width="50%" valign="top">
+**Senior Full-Stack Developer, Mobile & Backend** · Jun 2026 – present
 
-**Mobile**
-- Cross-platform features in React Native, Expo and TypeScript
-- Complex navigation and multi-step user flows
-- Native integrations, plus iOS- and Android-specific debugging
-- Performance-conscious UI, state management, server-state sync
+A full-stack role with growing ownership of backend architecture, production systems and end-to-end delivery.
 
-</td>
-<td width="50%" valign="top">
+- Own features end to end: technical design and backend architecture, API and service implementation, frontend integration and production rollout
+- Build new backend services and extend existing systems to support new product capabilities
+- Investigate and fix complex production issues across backend and frontend
+- Part of the on-call rotation: respond to production incidents and ship reliable fixes under time pressure
+- Work with product and engineering to turn requirements into maintainable, production-ready solutions
 
-**Frontend architecture**
-- Reusable components and shared app infrastructure
-- Extending and maintaining an existing app architecture
-- API-driven, asynchronous interfaces
-- TypeScript application design
+**React Native Developer** · Jan 2025 – Jun 2026
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+- Built an automation pipeline that converts Figma color tokens into fully typed code objects, removing manual color-mapping errors
+- Designed a strongly typed component variant system, so UI changes became configuration of reusable variants instead of complex conditionals
+- Refactored a large legacy JavaScript codebase into modern TypeScript, improving long-term stability and developer productivity
 
-**Backend and integrations**
-- REST API integrations and asynchronous workflows
-- Authentication, verification and user accounts
-- Reservations, purchases, discounts and digital entitlements
-- Node.js services, databases and third-party integrations
+### Partners Banka
+<sub>Prague, hybrid · Feb 2023 – Jan 2025</sub>
 
-</td>
-<td width="50%" valign="top">
+**Mobile Application Developer**
 
-**Delivery**
-- Turning product requirements into working features
-- Tracing production issues across app and backend
-- Working with shared systems and production dependencies
-- Maintenance and incident resolution alongside QA
+- Implemented card features as part of the cards team, in React Native and iOS
+- Developed an Apple Wallet extension with Apple's SDK for a smoother card tokenization flow
+- Worked with QA, UI/UX and product owners to ship features smoothly
 
-</td>
-</tr>
-</table>
+<details>
+<summary><b>Earlier roles</b> · Fortuna Entertainment Group, Onlio · 2021 – 2023</summary>
+<br>
+
+**Marketing Technology Specialist** · Fortuna Entertainment Group · Jun 2022 – Feb 2023
+
+- Managed Google Tag Manager to track user behavior and optimize marketing campaigns
+- Built and ran targeted campaigns in Exponea (Bloomreach)
+- Analyzed campaign performance to make data-driven decisions
+
+**React Developer** · Onlio · Jun 2021 – Dec 2021
+
+- Fixed bugs and implemented features in React, working alongside senior developers
+
+**Automated Software Testing** · Onlio · May 2021 – Jul 2021
+
+- Maintained Cypress tests and expanded test coverage for Onlio's React-based platform
+
+</details>
 
 ## Stack
 
 <p align="center">
-  <img src="assets/stack.svg" width="100%" alt="Specialization: TypeScript, React Native, Expo, React and Node.js. Mobile: Expo Router, Reanimated, Skia, react-native-svg, Expo Image, Expo Video, Hermes, iOS, Android. Web: Next.js, JavaScript, HTML and CSS, Zustand, React Context, SWR. Backend and data: Fastify, REST APIs, SQL, Prisma, Drizzle ORM, SQLite. Tooling: Git, GitHub, Linux, Docker. Explored in personal projects: C#, CounterStrikeSharp, Electron, Discord.js, Playwright, Unreal Engine, Blender.">
+  <img src="assets/stack.svg" width="100%" alt="Specialization: TypeScript, React Native, Expo, React and Node.js. Mobile: Expo Router, Reanimated, Skia, react-native-svg, Expo Image, Expo Video, Hermes, iOS, Android. Web: Next.js, JavaScript, HTML and CSS, Zustand, React Context, SWR. Backend and data: Fastify, REST APIs, SQL, MongoDB, Prisma, Drizzle ORM, SQLite. Tooling: Git, GitHub, Linux, Docker, Cypress. Explored in personal projects: C#, CounterStrikeSharp, Electron, Discord.js, Playwright, Unreal Engine, Blender.">
 </p>
 
 ## Selected work
