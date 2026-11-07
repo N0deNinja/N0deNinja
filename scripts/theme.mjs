@@ -2,21 +2,21 @@
 // SVGs in a README are rendered through <img>, so no web fonts: system stacks only.
 
 export const C = {
-  bgA: '#0b1322',
-  bgB: '#060a12',
-  panel: '#0c1424',
-  panel2: '#0f1a2e',
-  field: '#08101d',
-  line: '#1a2740',
-  line2: '#26364f',
-  text: '#e8eef7',
-  sub: '#a3b1c6',
-  mute: '#66768d',
-  cyan: '#22d3ee',
-  cyanLite: '#a5f3fc',
-  blue: '#60a5fa',
+  bgA: '#101a12',
+  bgB: '#080c09',
+  panel: '#0f1811',
+  panel2: '#132016',
+  field: '#0a110b',
+  line: '#1d2b1f',
+  line2: '#2b3e2d',
+  text: '#eef5e9',
+  sub: '#aebba8',
+  mute: '#6f8069',
+  accent: '#9bcc3f',
+  accentLite: '#d6f28e',
+  accent2: '#e2a55e',
   red: '#fb7185',
-  amber: '#fbbf24',
+  amber: '#f2b25c',
 };
 
 export const SANS = "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Inter, Roboto, Arial, sans-serif";
@@ -61,10 +61,10 @@ ${body}
 export function frame({ w, h, tab, tabIcon = 'dot', right = '', glow = null }) {
   const defs = `
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.bgA}"/><stop offset="1" stop-color="${C.bgB}"/></linearGradient>
-<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#1d2b44"/></pattern>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#1f2f22"/></pattern>
 <radialGradient id="dotfade" cx=".85" cy=".1" r="1"><stop offset="0" stop-color="#fff"/><stop offset=".75" stop-color="#fff" stop-opacity="0"/></radialGradient>
 <mask id="dotmask"><rect width="${w}" height="${h}" fill="url(#dotfade)"/></mask>
-<radialGradient id="glow"><stop offset="0" stop-color="${C.cyan}" stop-opacity=".16"/><stop offset="1" stop-color="${C.cyan}" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="${C.accent}" stop-opacity=".16"/><stop offset="1" stop-color="${C.accent}" stop-opacity="0"/></radialGradient>
 <clipPath id="card"><rect width="${w}" height="${h}" rx="20"/></clipPath>`;
 
   let body = `<g clip-path="url(#card)">
@@ -90,15 +90,15 @@ ${right ? `<text class="m" x="${w - 28}" y="42" font-size="15" fill="${C.mute}" 
 function tabGlyph(kind, cx, cy) {
   switch (kind) {
     case 'ts':
-      return `<rect x="${cx - 9}" y="${cy - 9}" width="18" height="18" rx="4" fill="none" stroke="${C.cyan}" stroke-width="1.6"/><text class="m" x="${cx + 7}" y="${cy + 6}" font-size="8.5" font-weight="700" fill="${C.cyan}" text-anchor="end">TS</text>`;
+      return `<rect x="${cx - 9}" y="${cy - 9}" width="18" height="18" rx="4" fill="none" stroke="${C.accent}" stroke-width="1.6"/><text class="m" x="${cx + 7}" y="${cy + 6}" font-size="8.5" font-weight="700" fill="${C.accent}" text-anchor="end">TS</text>`;
     case 'rec':
       return `<circle cx="${cx}" cy="${cy}" r="6" fill="${C.red}"/>`;
     case 'md':
-      return `<rect x="${cx - 10}" y="${cy - 7}" width="20" height="14" rx="3" fill="none" stroke="${C.cyan}" stroke-width="1.6"/><path d="M${cx - 6} ${cy + 3} v-6 l3 3 l3 -3 v6" fill="none" stroke="${C.cyan}" stroke-width="1.4" stroke-linejoin="round"/>`;
+      return `<rect x="${cx - 10}" y="${cy - 7}" width="20" height="14" rx="3" fill="none" stroke="${C.accent}" stroke-width="1.6"/><path d="M${cx - 6} ${cy + 3} v-6 l3 3 l3 -3 v6" fill="none" stroke="${C.accent}" stroke-width="1.4" stroke-linejoin="round"/>`;
     case 'log':
-      return `<path d="M${cx - 8} ${cy - 5} h16 M${cx - 8} ${cy} h11 M${cx - 8} ${cy + 5} h14" stroke="${C.cyan}" stroke-width="1.8" stroke-linecap="round"/>`;
+      return `<path d="M${cx - 8} ${cy - 5} h16 M${cx - 8} ${cy} h11 M${cx - 8} ${cy + 5} h14" stroke="${C.accent}" stroke-width="1.8" stroke-linecap="round"/>`;
     default:
-      return `<circle cx="${cx}" cy="${cy}" r="5" fill="${C.cyan}"/>`;
+      return `<circle cx="${cx}" cy="${cy}" r="5" fill="${C.accent}"/>`;
   }
 }
 

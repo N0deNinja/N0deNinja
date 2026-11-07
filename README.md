@@ -76,9 +76,9 @@ A full-stack role with growing ownership of backend architecture, production sys
 
 ### [ReTake](https://github.com/N0deNinja/ReTake)
 
-[![Release](https://img.shields.io/github/v/release/N0deNinja/ReTake?style=flat-square&label=release&labelColor=0b1322&color=0e7490)](https://github.com/N0deNinja/ReTake/releases/latest)
-[![License](https://img.shields.io/github/license/N0deNinja/ReTake?style=flat-square&labelColor=0b1322&color=26364f)](https://github.com/N0deNinja/ReTake/blob/main/LICENSE)
-![C++ and Luau](https://img.shields.io/badge/C%2B%2B%20%C2%B7%20Luau-26364f?style=flat-square)
+[![Release](https://img.shields.io/github/v/release/N0deNinja/ReTake?style=flat-square&label=release&labelColor=101a12&color=4f7d1f)](https://github.com/N0deNinja/ReTake/releases/latest)
+[![License](https://img.shields.io/github/license/N0deNinja/ReTake?style=flat-square&labelColor=101a12&color=2b3e2d)](https://github.com/N0deNinja/ReTake/blob/main/LICENSE)
+![C++ and Luau](https://img.shields.io/badge/C%2B%2B%20%C2%B7%20Luau-2b3e2d?style=flat-square)
 
 Rewind and retry for **skate.** on PC, built as a mod on the open-source [ReSkate](https://github.com/Dingo-Shenanigans/ReSkate) framework. Mess up anywhere in a line, pick an earlier moment on a timeline, and carry on from there. ReTake doesn't teleport you back. It replays your recorded inputs at accelerated speed until it reaches that moment, then slows down, counts you in and hands the controls back.
 
@@ -91,7 +91,7 @@ Rewind and retry for **skate.** on PC, built as a mod on the open-source [ReSkat
 
 Building it meant working inside a game runtime I didn't write: learning how its physics steps, grinds and bails behave, then a lot of iterative debugging to make replays line up.
 
-<sub>Early release (v0.0.1). Replays can still drift on rails and ledges; this is listed in the repo's known issues.</sub>
+<sub>Early release. Replays can still drift on rails and ledges; this is listed in the repo's known issues.</sub>
 
 ### Counter-Strike 2 server plugins
 

@@ -47,7 +47,7 @@ function hero() {
   ${mono(x0, base, p, FS, `fill="${C.text}"`)}
   <g class="c${i}">
     <rect x="${x0 - 1}" y="${bar.y + 5}" width="${L + 24}" height="${bar.h - 10}" fill="${C.field}"/>
-    <rect class="blink" x="${x0 + 1}" y="${bar.y + 14}" width="10" height="22" rx="1.5" fill="${C.cyan}"/>
+    <rect class="blink" x="${x0 + 1}" y="${bar.y + 14}" width="10" height="22" rx="1.5" fill="${C.accent}"/>
   </g>
 </g>`;
   });
@@ -57,8 +57,8 @@ function hero() {
   let cx = 64, chipSvg = '';
   for (const c of chips) {
     const w = monoW(c, 16) + 28;
-    chipSvg += `<rect x="${cx}" y="344" width="${w}" height="36" rx="18" fill="${C.cyan}" fill-opacity=".06" stroke="${C.cyan}" stroke-opacity=".38"/>
-${mono(cx + 14, 367, c, 16, `fill="${C.cyanLite}"`)}`;
+    chipSvg += `<rect x="${cx}" y="344" width="${w}" height="36" rx="18" fill="${C.accent}" fill-opacity=".06" stroke="${C.accent}" stroke-opacity=".38"/>
+${mono(cx + 14, 367, c, 16, `fill="${C.accentLite}"`)}`;
     cx += w + 10;
   }
 
@@ -88,7 +88,7 @@ ${mono(cx + 14, 367, c, 16, `fill="${C.cyanLite}"`)}`;
   // boxes + flash overlays
   const box = (x, y, w, cls) =>
     `<rect x="${x}" y="${y}" width="${w}" height="${bh}" rx="10" fill="${C.panel}" stroke="${C.line2}"/>
-<rect class="${cls}" x="${x}" y="${y}" width="${w}" height="${bh}" rx="10" fill="${C.cyan}" fill-opacity=".07" stroke="${C.cyan}" stroke-opacity=".9"/>`;
+<rect class="${cls}" x="${x}" y="${y}" width="${w}" height="${bh}" rx="10" fill="${C.accent}" fill-opacity=".07" stroke="${C.accent}" stroke-opacity=".9"/>`;
   clients.forEach((c, i) => {
     diag += box(c.x, rows[0], clientW, `fl cl${i}`);
     const icon = c.name === 'Web'
@@ -134,29 +134,29 @@ ${mono(cx + 14, 367, c, 16, `fill="${C.cyanLite}"`)}`;
 @keyframes breathe{0%,100%{opacity:.75}50%{opacity:1}}`;
   const pkt = (x, cls, color) => `<rect class="pk ${cls}" x="${x - 3}" y="0" width="6" height="${PH}" rx="3" fill="${color}"/>`;
   clients.forEach((c, i) => {
-    diag += pkt(c.cx, `q1${i ? ` d${i}` : ''}`, C.cyan);
-    diag += pkt(c.cx, `q6${i ? ` d${i}` : ''}`, C.blue);
+    diag += pkt(c.cx, `q1${i ? ` d${i}` : ''}`, C.accent);
+    diag += pkt(c.cx, `q6${i ? ` d${i}` : ''}`, C.accent2);
   });
-  diag += pkt(DOWN, 'q2', C.cyan) + pkt(DOWN, 'q3', C.cyan) + pkt(UP, 'q4', C.blue) + pkt(UP, 'q5', C.blue);
+  diag += pkt(DOWN, 'q2', C.accent) + pkt(DOWN, 'q3', C.accent) + pkt(UP, 'q4', C.accent2) + pkt(UP, 'q5', C.accent2);
 
   const pin = `<path d="M70 236 c-6 0 -10 4.4 -10 9.6 c0 7 10 16.4 10 16.4 s10 -9.4 10 -16.4 c0 -5.2 -4 -9.6 -10 -9.6z" transform="translate(0 -13)" fill="none" stroke="${C.mute}" stroke-width="1.8"/><circle cx="70" cy="232.5" r="3" fill="${C.mute}"/>`;
 
   const body = `${f.body}
-<rect x="64" y="72" width="3" height="20" fill="${C.cyan}"/>
-<text class="m" x="80" y="88" font-size="16" fill="${C.cyan}" letter-spacing="3.2">SENIOR FULL-STACK DEVELOPER</text>
+<rect x="64" y="72" width="3" height="20" fill="${C.accent}"/>
+<text class="m" x="80" y="88" font-size="16" fill="${C.accent}" letter-spacing="3.2">SENIOR FULL-STACK DEVELOPER</text>
 <text class="s" x="60" y="166" font-size="74" font-weight="700" fill="url(#name)" letter-spacing="-1">George Dvořák</text>
 ${sans(64, 207, 'Cross-platform mobile, web & backend engineering', 24, `fill="${C.sub}"`)}
 ${pin}
 ${sans(88, 251, 'Prague, Czech Republic', 19, `fill="${C.mute}"`)}
 <rect x="${bar.x}" y="${bar.y}" width="${bar.w}" height="${bar.h}" rx="12" fill="${C.field}" stroke="${C.line2}"/>
-${mono(84, base, '$', FS, `fill="${C.cyan}"`)}
+${mono(84, base, '$', FS, `fill="${C.accent}"`)}
 <g clip-path="url(#typeclip)">${typed}
 </g>
 ${chipSvg}
 ${diag}`;
 
   const defs = `${f.defs}
-<linearGradient id="name" x1="0" x2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c7f4fd"/></linearGradient>
+<linearGradient id="name" x1="0" x2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dff5a8"/></linearGradient>
 <clipPath id="typeclip"><rect x="${x0 - 2}" y="${bar.y + 2}" width="${bar.x + bar.w - x0 - 4}" height="${bar.h - 4}"/></clipPath>`;
 
   return svgDoc({
@@ -194,7 +194,7 @@ function stack() {
     clips += `<clipPath id="tile${i}"><rect x="${x}" y="${tileY}" width="${tileW}" height="${tileH}" rx="14"/></clipPath>`;
     tiles += `<rect x="${x}" y="${tileY}" width="${tileW}" height="${tileH}" rx="14" fill="${C.panel}" stroke="${C.line2}"/>
 <g clip-path="url(#tile${i})"><rect class="sheen sh${i}" x="${x - 160}" y="${tileY - 20}" width="120" height="${tileH + 40}" fill="url(#sheen)" transform="skewX(-18)"/></g>
-<rect x="${x + 22}" y="${tileY + 22}" width="48" height="48" rx="11" fill="${C.cyan}" fill-opacity=".07" stroke="${C.cyan}" stroke-opacity=".28"/>
+<rect x="${x + 22}" y="${tileY + 22}" width="48" height="48" rx="11" fill="${C.accent}" fill-opacity=".07" stroke="${C.accent}" stroke-opacity=".28"/>
 ${icon(t.icon, x + 46, tileY + 46)}
 ${sans(x + 22, tileY + 104, t.name, 23, `fill="${C.text}" font-weight="650"`)}
 ${mono(x + 22, tileY + 131, t.cap, 14, `fill="${C.mute}"`)}`;
@@ -220,7 +220,7 @@ ${mono(x + 22, tileY + 131, t.cap, 14, `fill="${C.mute}"`)}`;
       const w = monoW(item, fs) + 28;
       if (x + w > chipMax) { x = chipX; y += lineH; lines++; }
       rowsSvg += `<rect x="${x}" y="${y}" width="${w}" height="${ch}" rx="8" fill="${g.dashed ? 'none' : C.panel}" stroke="${g.dashed ? C.mute : C.line2}"${g.dashed ? ' stroke-dasharray="4 4"' : ''}/>
-${mono(x + 14, y + 22.5, item, fs, `fill="${g.dashed ? C.sub : '#c9d4e3'}"`)}`;
+${mono(x + 14, y + 22.5, item, fs, `fill="${g.dashed ? C.sub : '#d3ddcd'}"`)}`;
       x += w + gap;
     }
     y += lineH + (gi < groups.length - 1 ? 6 : 0);
@@ -229,8 +229,8 @@ ${mono(x + 14, y + 22.5, item, fs, `fill="${g.dashed ? C.sub : '#c9d4e3'}"`)}`;
   const f = frame({ w: W, h: H, tab: 'stack.ts', tabIcon: 'ts', right: '// specialization first, then everything else' });
 
   const body = `${f.body}
-<rect x="48" y="86" width="3" height="18" fill="${C.cyan}"/>
-<text class="m" x="62" y="101" font-size="15" fill="${C.cyan}" letter-spacing="3">SPECIALIZATION</text>
+<rect x="48" y="86" width="3" height="18" fill="${C.accent}"/>
+<text class="m" x="62" y="101" font-size="15" fill="${C.accent}" letter-spacing="3">SPECIALIZATION</text>
 ${tiles}
 <rect x="48" y="${tileY + tileH + 24}" width="3" height="18" fill="${C.mute}"/>
 <text class="m" x="62" y="${tileY + tileH + 39}" font-size="15" fill="${C.sub}" letter-spacing="3">ALSO IN THE TOOLBOX</text>
@@ -240,27 +240,27 @@ ${rowsSvg}`;
     title: 'Technology stack',
     desc: 'Specialization: TypeScript, React Native, Expo, React, Node.js. Also: mobile, web, backend and tooling libraries, plus technologies explored in personal projects.',
     style: css,
-    defs: `${f.defs}${clips}<linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#bff6ff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
+    defs: `${f.defs}${clips}<linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#e6f9b8" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
     body,
   });
 }
 
 function icon(kind, cx, cy) {
-  const s = `fill="none" stroke="${C.cyan}" stroke-width="1.8" stroke-linejoin="round"`;
+  const s = `fill="none" stroke="${C.accent}" stroke-width="1.8" stroke-linejoin="round"`;
   const atom = (rx, ry, x = cx, y = cy) =>
     [0, 60, 120].map((a) => `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" transform="rotate(${a} ${x} ${y})" ${s}/>`).join('') +
-    `<circle cx="${x}" cy="${y}" r="${rx / 6}" fill="${C.cyan}"/>`;
+    `<circle cx="${x}" cy="${y}" r="${rx / 6}" fill="${C.accent}"/>`;
   switch (kind) {
     case 'ts':
-      return `<rect x="${cx - 14}" y="${cy - 14}" width="28" height="28" rx="5" ${s}/><text class="m" x="${cx + 11}" y="${cy + 10}" font-size="13" font-weight="700" fill="${C.cyan}" text-anchor="end">TS</text>`;
+      return `<rect x="${cx - 14}" y="${cy - 14}" width="28" height="28" rx="5" ${s}/><text class="m" x="${cx + 11}" y="${cy + 10}" font-size="13" font-weight="700" fill="${C.accent}" text-anchor="end">TS</text>`;
     case 'rn':
-      return `<rect x="${cx - 11}" y="${cy - 17}" width="22" height="34" rx="5" ${s}/><path d="M${cx - 3} ${cy + 12.5} h6" stroke="${C.cyan}" stroke-width="1.8" stroke-linecap="round"/>${atom(7.5, 2.9, cx, cy - 2)}`;
+      return `<rect x="${cx - 11}" y="${cy - 17}" width="22" height="34" rx="5" ${s}/><path d="M${cx - 3} ${cy + 12.5} h6" stroke="${C.accent}" stroke-width="1.8" stroke-linecap="round"/>${atom(7.5, 2.9, cx, cy - 2)}`;
     case 'expo':
       return `<path d="M${cx} ${cy - 14} L${cx + 15} ${cy - 6} L${cx} ${cy + 2} L${cx - 15} ${cy - 6} Z" ${s}/><path d="M${cx - 15} ${cy} L${cx} ${cy + 8} L${cx + 15} ${cy}" ${s}/><path d="M${cx - 15} ${cy + 6} L${cx} ${cy + 14} L${cx + 15} ${cy + 6}" ${s}/>`;
     case 'react':
       return atom(16, 6.2);
     case 'node':
-      return `<path d="M${cx} ${cy - 16} L${cx + 14} ${cy - 8} V${cy + 8} L${cx} ${cy + 16} L${cx - 14} ${cy + 8} V${cy - 8} Z" ${s}/><text class="m" x="${cx}" y="${cy + 5}" font-size="12" font-weight="700" fill="${C.cyan}" text-anchor="middle">js</text>`;
+      return `<path d="M${cx} ${cy - 16} L${cx + 14} ${cy - 8} V${cy + 8} L${cx} ${cy + 16} L${cx - 14} ${cy + 8} V${cy - 8} Z" ${s}/><text class="m" x="${cx}" y="${cy + 5}" font-size="12" font-weight="700" fill="${C.accent}" text-anchor="middle">js</text>`;
     default:
       return '';
   }
@@ -289,8 +289,8 @@ function workflow() {
   steps.forEach(([title, cap], i) => {
     const x = nx(i);
     nodes += `<rect x="${x}" y="${ny}" width="${nw}" height="${nh}" rx="12" fill="${C.panel}" stroke="${C.line2}"/>
-<rect class="hl n${i}" x="${x}" y="${ny}" width="${nw}" height="${nh}" rx="12" fill="${C.cyan}" fill-opacity=".08" stroke="${C.cyan}"/>
-${mono(x + 16, ny + 24, String(i + 1).padStart(2, '0'), 13, `fill="${C.cyan}"`)}
+<rect class="hl n${i}" x="${x}" y="${ny}" width="${nw}" height="${nh}" rx="12" fill="${C.accent}" fill-opacity=".08" stroke="${C.accent}"/>
+${mono(x + 16, ny + 24, String(i + 1).padStart(2, '0'), 13, `fill="${C.accent}"`)}
 ${sans(x + 16, ny + 49, title, 19, `fill="${C.text}" font-weight="650"`)}
 ${mono(x + 16, ny + 68, cap, 13, `fill="${C.mute}"`)}`;
     if (i < steps.length - 1) {
@@ -306,7 +306,7 @@ ${mono(x + 16, ny + 68, cap, 13, `fill="${C.mute}"`)}`;
   const loopD = `M${r1(c5)} ${yb + 6} C${r1(c5)} ${yb + 62} ${r1(c4)} ${yb + 62} ${r1(c4)} ${yb + 10}`;
   nodes += `<path d="${loopD}" fill="none" stroke="${C.line2}" stroke-width="2" stroke-dasharray="4 6"/>
 <path d="M${r1(c4 - 6)} ${yb + 17} L${r1(c4)} ${yb + 9} L${r1(c4 + 6)} ${yb + 17}" fill="none" stroke="${C.line2}" stroke-width="2"/>
-<path class="loop" d="${loopD}" fill="none" stroke="${C.cyan}" stroke-width="2.4" stroke-dasharray="6 8"/>
+<path class="loop" d="${loopD}" fill="none" stroke="${C.accent}" stroke-width="2.4" stroke-dasharray="6 8"/>
 <text class="m" x="${r1((c4 + c5) / 2)}" y="${yb + 72}" font-size="14" fill="${C.sub}" text-anchor="middle">iterate</text>`;
   css += `
 .hl{opacity:0}
@@ -405,17 +405,17 @@ ${opPairs ? animate('opacity', T, opPairs) : ''}
   const fadeAll = [[0, 1], [tFade, 1], [T - 0.05, 0], [T, 0]];
   let trails = '';
   // full-line glow for "play whole line"
-  trails += `<path d="${fullD}" fill="none" stroke="${C.cyan}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0" stroke-opacity=".22">${animate('opacity', T, [[0, 0], [tEnd, 0], [tEnd + 0.4, 1], [tFade, 1], [T - 0.05, 0]])}</path>`;
+  trails += `<path d="${fullD}" fill="none" stroke="${C.accent}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0" stroke-opacity=".22">${animate('opacity', T, [[0, 0], [tEnd, 0], [tEnd + 0.4, 1], [tFade, 1], [T - 0.05, 0]])}</path>`;
   // recorded, kept part [0, fr]
   trails += trail(sub(0, fr), C.text, 3, [[0, 1], [tA, 0], [T - 0.05, 0], [T, 1]], 'stroke-opacity=".5"', fadeAll);
   // recorded, later discarded part [fr, fb]
   trails += trail(sub(fr, fb), C.text, 3, [[0, 1], [tA, 1], [tBail, 0], [T, 0]], 'stroke-opacity=".5"',
     [[0, 1], [tPress, 1], [tPress + 1.0, 0], [T - 0.05, 0], [T, 1]]);
   trails += `<path d="${sub(fr, fb)}" fill="none" stroke="${C.red}" stroke-width="3" stroke-dasharray="5 7" stroke-linecap="round" opacity="0">${animate('opacity', T, [[0, 0], [tPress, 0], [tPress + 0.1, 1], [tPress + 1.0, 0]])}</path>`;
-  // catch-up replays the kept part in cyan
-  trails += trail(sub(0, fr), C.cyan, 3.4, [[0, 1], [tCatchA, 1], [tCatchB, 0], [T - 0.05, 0], [T, 1]], '', fadeAll);
+  // catch-up replays the kept part in the accent colour
+  trails += trail(sub(0, fr), C.accent, 3.4, [[0, 1], [tCatchA, 1], [tCatchB, 0], [T - 0.05, 0], [T, 1]], '', fadeAll);
   // the new attempt
-  trails += trail(sub(fr, 1), C.cyan, 3.4, [[0, 1], [tGo, 1], [tEnd, 0], [T - 0.05, 0], [T, 1]], '', fadeAll);
+  trails += trail(sub(fr, 1), C.accent, 3.4, [[0, 1], [tGo, 1], [tEnd, 0], [T - 0.05, 0], [T, 1]], '', fadeAll);
 
   // ---- skater ----
   const keyPts = [[0, 0], [tBail, fb], [tCatchA - 0.01, fb], [tCatchA, 0], [tCatchB, fr], [tGo, fr], [tEnd, 1], [T, 1]];
@@ -432,8 +432,8 @@ ${opPairs ? animate('opacity', T, opPairs) : ''}
   const skater = `
 <g opacity="0">
   ${animate('opacity', T, [[0, 1], [tBail, 1], [tBail + 0.01, 0], [tCatchA - 0.01, 0], [tCatchA, 1], [tEnd + 0.3, 1], [tEnd + 0.5, 0], [T, 0]])}
-  <circle r="16" fill="${C.cyan}" opacity=".0">${animate('opacity', T, [[0, 0], [tCatchA, 0], [tCatchA + 0.1, 0.25], [tEnd, 0.25], [tEnd + 0.3, 0]])}</circle>
-  <circle r="${R}" fill="${C.text}" stroke="${C.bgB}" stroke-width="2">${animate('fill', T, [[0, C.text], [tCatchA - 0.01, C.text], [tCatchA, C.cyan], [T - 0.01, C.cyan], [T, C.text]])}</circle>
+  <circle r="16" fill="${C.accent}" opacity=".0">${animate('opacity', T, [[0, 0], [tCatchA, 0], [tCatchA + 0.1, 0.25], [tEnd, 0.25], [tEnd + 0.3, 0]])}</circle>
+  <circle r="${R}" fill="${C.text}" stroke="${C.bgB}" stroke-width="2">${animate('fill', T, [[0, C.text], [tCatchA - 0.01, C.text], [tCatchA, C.accent], [T - 0.01, C.accent], [T, C.text]])}</circle>
   <animateMotion dur="${T}s" repeatCount="indefinite" calcMode="linear" path="${fullD}" ${mk(keyPts)}/>
 </g>`;
   const ghost = `
@@ -445,8 +445,8 @@ ${opPairs ? animate('opacity', T, opPairs) : ''}
   const runner = `
 <g opacity="0">
   ${animate('opacity', T, [[0, 0], [tWholeA - 0.05, 0], [tWholeA, 1], [tWholeB, 1], [tWholeB + 0.2, 0]])}
-  <circle r="15" fill="${C.cyan}" opacity=".25"/>
-  <circle r="${R}" fill="${C.cyan}" stroke="${C.bgB}" stroke-width="2"/>
+  <circle r="15" fill="${C.accent}" opacity=".25"/>
+  <circle r="${R}" fill="${C.accent}" stroke="${C.bgB}" stroke-width="2"/>
   <animateMotion dur="${T}s" repeatCount="indefinite" calcMode="linear" path="${fullD}" ${mk([[0, 0], [tWholeA, 0], [tWholeB, 1], [T, 1]])}/>
 </g>`;
   const bail = `
@@ -460,14 +460,14 @@ ${opPairs ? animate('opacity', T, opPairs) : ''}
     return `<text class="s" x="${r1(rxp)}" y="${r1(ryp - 44)}" font-size="56" font-weight="700" fill="${C.amber}" text-anchor="middle" opacity="0">${n}${windowOpacity(T, a, b, 0.08)}</text>`;
   }).join('');
   const pickMark = `<g opacity="0">${animate('opacity', T, [[0, 0], [tScrubB, 0], [tScrubB + 0.2, 1], [tGo, 1], [tGo + 0.3, 0]])}
-<line x1="${r1(rxp)}" y1="${r1(ryp + 14)}" x2="${r1(rxp)}" y2="${G}" stroke="${C.cyan}" stroke-dasharray="2 4"/></g>`;
+<line x1="${r1(rxp)}" y1="${r1(ryp + 14)}" x2="${r1(rxp)}" y2="${G}" stroke="${C.accent}" stroke-dasharray="2 4"/></g>`;
 
   // ---- scene props ----
   const ledge = `<rect x="300" y="${G - 38}" width="150" height="38" rx="3" fill="${C.panel2}" stroke="${C.line2}"/>`;
   const kicker = `<path d="M530 ${G} L582 ${G - 30} L582 ${G} Z" fill="${C.panel2}" stroke="${C.line2}"/>`;
   const rail = `<path d="M846 ${G - 50} H1004" stroke="${C.sub}" stroke-width="4" stroke-linecap="round"/><path d="M870 ${G - 50} V${G} M980 ${G - 50} V${G}" stroke="${C.line2}" stroke-width="3"/>`;
   const ground = `<path d="M56 ${G} H596 M744 ${G} H1144" stroke="${C.line2}" stroke-width="2"/><path d="M600 ${G} H740" stroke="${C.line2}" stroke-width="2" stroke-dasharray="2 8"/>`;
-  const flag = `<g><path d="M1122 ${G} V${G - 54}" stroke="${C.sub}" stroke-width="2"/><path d="M1122 ${G - 54} L1146 ${G - 46} L1122 ${G - 38} Z" fill="${C.line2}">${animate('fill', T, [[0, C.line2], [tEnd - 0.01, C.line2], [tEnd, C.cyan], [tFade, C.cyan], [T, C.line2]])}</path></g>`;
+  const flag = `<g><path d="M1122 ${G} V${G - 54}" stroke="${C.sub}" stroke-width="2"/><path d="M1122 ${G - 54} L1146 ${G - 46} L1122 ${G - 38} Z" fill="${C.line2}">${animate('fill', T, [[0, C.line2], [tEnd - 0.01, C.line2], [tEnd, C.accent], [tFade, C.accent], [T, C.line2]])}</path></g>`;
   const labels = [[375, 'ledge'], [670, 'gap'], [925, 'rail'], [86, 'start']]
     .map(([x, s]) => `<text class="m" x="${x}" y="${G + 24}" font-size="13" fill="${C.mute}" text-anchor="middle">${s}</text>`).join('');
 
@@ -482,19 +482,19 @@ ${opPairs ? animate('opacity', T, opPairs) : ''}
   ];
   const captions = caps.map(([a, b, s], i) =>
     `<g opacity="${i === 0 ? 1 : 0}">${windowOpacity(T, a, b, 0.2)}
-${mono(48, 102, String(i + 1).padStart(2, '0'), 15, `fill="${C.cyan}"`)}
+${mono(48, 102, String(i + 1).padStart(2, '0'), 15, `fill="${C.accent}"`)}
 ${sans(84, 103, s, 22, `fill="${C.text}" font-weight="600"`)}</g>`).join('');
 
   const states = [
     [0, tBail, '● REC', C.red],
     [tBail, tOpen, 'BAIL', C.red],
-    [tOpen, tPress, 'F11 · TIMELINE', C.cyan],
-    [tPress, tCatchB, 'CATCH-UP 4×', C.cyan],
+    [tOpen, tPress, 'F11 · TIMELINE', C.accent],
+    [tPress, tCatchB, 'CATCH-UP 4×', C.accent],
     [tCatchB, tCatchB + 0.6, '3', C.amber],
     [tCatchB + 0.6, tCatchB + 1.2, '2', C.amber],
     [tCatchB + 1.2, tGo, '1', C.amber],
     [tGo, tEnd, '● REC', C.red],
-    [tEnd, T, '▶ WHOLE LINE', C.cyan],
+    [tEnd, T, '▶ WHOLE LINE', C.accent],
   ];
   const pillW = 210, pillX = W - 28 - pillW;
   const status = `<rect x="${pillX}" y="15" width="${pillW}" height="30" rx="15" fill="${C.field}" stroke="${C.line2}"/>` +
@@ -510,7 +510,7 @@ ${sans(84, 103, s, 22, `fill="${C.text}" font-weight="600"`)}</g>`).join('');
     return {
       w,
       svg: `<rect x="${x}" y="${py + 82}" width="${w}" height="32" rx="8" fill="${C.panel}" stroke="${C.line2}"/>
-<rect x="${x}" y="${py + 82}" width="${w}" height="32" rx="8" fill="${C.cyan}" fill-opacity=".18" stroke="${C.cyan}" opacity="0">${flashAt ? animate('opacity', T, [[0, 0], [flashAt - 0.3, 0], [flashAt - 0.2, 1], [flashAt + 0.5, 1], [flashAt + 0.9, 0]]) : ''}</rect>
+<rect x="${x}" y="${py + 82}" width="${w}" height="32" rx="8" fill="${C.accent}" fill-opacity=".18" stroke="${C.accent}" opacity="0">${flashAt ? animate('opacity', T, [[0, 0], [flashAt - 0.3, 0], [flashAt - 0.2, 1], [flashAt + 0.5, 1], [flashAt + 0.9, 0]]) : ''}</rect>
 ${mono(x + 15, py + 103, label, 14, `fill="${C.text}"`)}`,
     };
   };
@@ -524,7 +524,7 @@ ${mono(x + 15, py + 103, label, 14, `fill="${C.text}"`)}`,
 
   const panel = `
 <rect x="${px}" y="${py}" width="${pw}" height="${ph}" rx="14" fill="${C.field}" stroke="${C.line2}"/>
-<rect x="${px}" y="${py}" width="${pw}" height="${ph}" rx="14" fill="none" stroke="${C.cyan}" opacity="0">${animate('opacity', T, [[0, 0], [tOpen - 0.1, 0], [tOpen + 0.15, 0.9], [tPress + 0.4, 0.9], [tPress + 0.8, 0]])}</rect>
+<rect x="${px}" y="${py}" width="${pw}" height="${ph}" rx="14" fill="none" stroke="${C.accent}" opacity="0">${animate('opacity', T, [[0, 0], [tOpen - 0.1, 0], [tOpen + 0.15, 0.9], [tPress + 0.4, 0.9], [tPress + 0.8, 0]])}</rect>
 <rect x="${tx}" y="${py + 16}" width="38" height="22" rx="5" fill="none" stroke="${C.line2}"/>
 ${mono(tx + 7, py + 32, 'F11', 13, `fill="${C.sub}"`)}
 ${mono(tx + 50, py + 32, 'timeline', 14, `fill="${C.sub}"`)}
@@ -532,12 +532,12 @@ ${mono(tx + 50, py + 32, 'timeline', 14, `fill="${C.sub}"`)}
 <rect x="${tx}" y="${ty - 3}" width="${tw}" height="6" rx="3" fill="${C.line}"/>
 <rect x="${tx}" y="${ty - 3}" width="0" height="6" rx="3" fill="${C.text}" fill-opacity=".45">${animate('width', T, [[0, 0], [tBail, fb * tw], [tPress, fb * tw], [tPress + 0.01, fr * tw], [T - 0.05, fr * tw], [T, 0]])}</rect>
 <rect x="${r1(X(fr))}" y="${ty - 3}" width="${r1((fb - fr) * tw)}" height="6" fill="${C.red}" opacity="0">${animate('opacity', T, [[0, 0], [tPress, 0], [tPress + 0.05, 1], [tPress + 0.9, 0]])}</rect>
-<rect x="${tx}" y="${ty - 3}" width="0" height="6" rx="3" fill="${C.cyan}">${animate('width', T, [[0, 0], [tCatchA, 0], [tCatchB, fr * tw], [tFade, fr * tw], [T - 0.05, 0]])}</rect>
-<rect x="${r1(X(fr))}" y="${ty - 3}" width="0" height="6" fill="${C.cyan}">${animate('width', T, [[0, 0], [tGo, 0], [tEnd, (1 - fr) * tw], [tFade, (1 - fr) * tw], [T - 0.05, 0]])}</rect>
+<rect x="${tx}" y="${ty - 3}" width="0" height="6" rx="3" fill="${C.accent}">${animate('width', T, [[0, 0], [tCatchA, 0], [tCatchB, fr * tw], [tFade, fr * tw], [T - 0.05, 0]])}</rect>
+<rect x="${r1(X(fr))}" y="${ty - 3}" width="0" height="6" fill="${C.accent}">${animate('width', T, [[0, 0], [tGo, 0], [tEnd, (1 - fr) * tw], [tFade, (1 - fr) * tw], [T - 0.05, 0]])}</rect>
 <g>
   ${translateX(T, [[0, X(0)], [tBail, X(fb)], [tScrubA, X(fb)], [tScrubB, X(fr)], [tGo, X(fr)], [tEnd, X(1)], [tWholeA - 0.01, X(1)], [tWholeA, X(0)], [tWholeB, X(1)], [T - 0.02, X(1)], [T, X(0)]])}
-  <path d="M0 ${ty - 14} V${ty + 14}" stroke="${C.cyan}" stroke-width="2"/>
-  <circle cx="0" cy="${ty}" r="7" fill="${C.cyan}" stroke="${C.field}" stroke-width="3"/>
+  <path d="M0 ${ty - 14} V${ty + 14}" stroke="${C.accent}" stroke-width="2"/>
+  <circle cx="0" cy="${ty}" r="7" fill="${C.accent}" stroke="${C.field}" stroke-width="3"/>
 </g>
 ${buttons}`;
 
@@ -572,11 +572,11 @@ function career() {
   const barY = 126, barH = 12;
   // [company, role, from [y, m], to [y, m] (exclusive), color, opacity]
   const segs = [
-    ['Onlio', 'React · QA', [2021, 5], [2022, 1], C.cyan, 0.35],
+    ['Onlio', 'React · QA', [2021, 5], [2022, 1], C.accent, 0.35],
     ['Fortuna', 'MarTech', [2022, 6], [2023, 2], C.sub, 0.3],
-    ['Partners Banka', 'Mobile · React Native', [2023, 2], [2025, 1], C.cyan, 0.55],
-    ['Piletilevi PLG', 'React Native', [2025, 1], [2026, 6], C.cyan, 0.78],
-    [null, 'Senior Full-Stack', [2026, 6], [2027, 1], C.cyan, 1],
+    ['Partners Banka', 'Mobile · React Native', [2023, 2], [2025, 1], C.accent, 0.55],
+    ['Piletilevi PLG', 'React Native', [2025, 1], [2026, 6], C.accent, 0.78],
+    [null, 'Senior Full-Stack', [2026, 6], [2027, 1], C.accent, 1],
   ];
   // The current role runs up to the build date.
   const today = new Date();
@@ -590,7 +590,7 @@ function career() {
     body += `<g class="lab" style="animation-delay:${d}s">`;
     if (company) body += sans(x0, barY - 16, company, 18, `fill="${C.text}" font-weight="650"`);
     body += last
-      ? `<text class="m" x="${r1(x1 + 6)}" y="${barY + 38}" font-size="14" fill="${C.cyanLite}" text-anchor="end">${esc(role)}</text>`
+      ? `<text class="m" x="${r1(x1 + 6)}" y="${barY + 38}" font-size="14" fill="${C.accentLite}" text-anchor="end">${esc(role)}</text>`
       : mono(x0, barY + 38, role, 14, `fill="${C.mute}"`);
     body += `</g>`;
   });
@@ -604,7 +604,7 @@ function career() {
 <text class="m" x="${xx}" y="${axisY + 26}" font-size="13" fill="${C.mute}" text-anchor="${anchor}">${start + k}</text>`;
   }
   // "now" marker at the build date
-  body += `<circle class="pulse" cx="${nx}" cy="${barY + barH / 2}" r="11" fill="none" stroke="${C.cyan}" stroke-width="2"/>
+  body += `<circle class="pulse" cx="${nx}" cy="${barY + barH / 2}" r="11" fill="none" stroke="${C.accent}" stroke-width="2"/>
 <circle cx="${nx}" cy="${barY + barH / 2}" r="5" fill="#ffffff"/>`;
   css += `
 .seg{transform-box:fill-box;transform-origin:left center;animation:grow .7s cubic-bezier(.2,.7,.2,1) both}
@@ -620,7 +620,7 @@ function career() {
     title: 'Career timeline',
     desc: 'Onlio, React and QA, 2021. Fortuna Entertainment Group, marketing technology, 2022 to 2023. Partners Banka, mobile with React Native, 2023 to 2025. Piletilevi PLG, React Native developer 2025 to 2026, then Senior Full-Stack Developer from June 2026.',
     style: css,
-    defs: `${f.defs}<linearGradient id="now" x1="0" x2="1"><stop offset="0" stop-color="${C.cyan}"/><stop offset="1" stop-color="#7df0ff"/></linearGradient>`,
+    defs: `${f.defs}<linearGradient id="now" x1="0" x2="1"><stop offset="0" stop-color="${C.accent}"/><stop offset="1" stop-color="#d6f28e"/></linearGradient>`,
     body: `${f.body}\n${body}`,
   });
 }
@@ -693,22 +693,22 @@ ${sans(textX, y, co.name, 28, `fill="${C.text}" font-weight="700"`)}
       y += 34;
       const dr = delay();
       body += `<g class="in" style="animation-delay:${dr}s">
-${r.current ? `<circle class="pulse" cx="${railX}" cy="${y - 7}" r="9" fill="none" stroke="${C.cyan}" stroke-width="2"/>` : ''}
-<circle cx="${railX}" cy="${y - 7}" r="6.5" fill="${r.current ? C.cyan : C.bgA}" stroke="${C.cyan}" stroke-width="2"/>
-<text class="m" x="${dateX}" y="${y - 1}" font-size="15" fill="${r.current ? C.cyanLite : C.sub}" text-anchor="end">${esc(r.dates)}</text>
-${r.current ? `<rect x="${dateX - 74}" y="${y + 12}" width="74" height="22" rx="11" fill="${C.cyan}" fill-opacity=".1" stroke="${C.cyan}" stroke-opacity=".5"/><text class="m" x="${dateX - 37}" y="${y + 27}" font-size="11.5" font-weight="700" fill="${C.cyan}" text-anchor="middle" letter-spacing="1.5">CURRENT</text>` : ''}
-${sans(textX, y, r.title, 21, `fill="${r.current ? C.cyanLite : C.text}" font-weight="650"`)}`;
+${r.current ? `<circle class="pulse" cx="${railX}" cy="${y - 7}" r="9" fill="none" stroke="${C.accent}" stroke-width="2"/>` : ''}
+<circle cx="${railX}" cy="${y - 7}" r="6.5" fill="${r.current ? C.accent : C.bgA}" stroke="${C.accent}" stroke-width="2"/>
+<text class="m" x="${dateX}" y="${y - 1}" font-size="15" fill="${r.current ? C.accentLite : C.sub}" text-anchor="end">${esc(r.dates)}</text>
+${r.current ? `<rect x="${dateX - 74}" y="${y + 12}" width="74" height="22" rx="11" fill="${C.accent}" fill-opacity=".1" stroke="${C.accent}" stroke-opacity=".5"/><text class="m" x="${dateX - 37}" y="${y + 27}" font-size="11.5" font-weight="700" fill="${C.accent}" text-anchor="middle" letter-spacing="1.5">CURRENT</text>` : ''}
+${sans(textX, y, r.title, 21, `fill="${r.current ? C.accentLite : C.text}" font-weight="650"`)}`;
       y += 8;
       for (const b of r.bullets) {
         y += 31;
-        body += `<path d="M${textX + 2} ${y - 11} l6 5 l-6 5" fill="none" stroke="${C.cyan}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        body += `<path d="M${textX + 2} ${y - 11} l6 5 l-6 5" fill="none" stroke="${C.accent}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 ${sans(textX + 22, y, b, 18, `fill="${C.sub}"`)}`;
       }
       y += 18;
       let cx = textX;
       for (const c of r.chips) {
         const w = monoW(c, 14) + 22;
-        body += `<rect x="${cx}" y="${y}" width="${w}" height="28" rx="7" fill="${C.panel}" stroke="${C.line2}"/>${mono(cx + 11, y + 19, c, 14, `fill="#c9d4e3"`)}`;
+        body += `<rect x="${cx}" y="${y}" width="${w}" height="28" rx="7" fill="${C.panel}" stroke="${C.line2}"/>${mono(cx + 11, y + 19, c, 14, `fill="#d3ddcd"`)}`;
         cx += w + 8;
       }
       body += `</g>`;
@@ -760,8 +760,8 @@ function button(label, glyph) {
   const fs = 15, tw = monoW(label, fs) + label.length * 1.2;
   const w = Math.round(18 + 20 + 12 + tw + 20), h = 44;
   const g = glyph === 'globe'
-    ? `<circle cx="28" cy="22" r="9" fill="none" stroke="${C.cyan}" stroke-width="1.7"/><ellipse cx="28" cy="22" rx="4" ry="9" fill="none" stroke="${C.cyan}" stroke-width="1.5"/><path d="M19 22 H37" stroke="${C.cyan}" stroke-width="1.5"/>`
-    : `<rect x="19" y="13" width="18" height="18" rx="4" fill="${C.cyan}"/><text class="s" x="28" y="27.2" font-size="12.5" font-weight="800" fill="${C.bgB}" text-anchor="middle">in</text>`;
+    ? `<circle cx="28" cy="22" r="9" fill="none" stroke="${C.accent}" stroke-width="1.7"/><ellipse cx="28" cy="22" rx="4" ry="9" fill="none" stroke="${C.accent}" stroke-width="1.5"/><path d="M19 22 H37" stroke="${C.accent}" stroke-width="1.5"/>`
+    : `<rect x="19" y="13" width="18" height="18" rx="4" fill="${C.accent}"/><text class="s" x="28" y="27.2" font-size="12.5" font-weight="800" fill="${C.bgB}" text-anchor="middle">in</text>`;
   return svgDoc({
     w, h, title: label, desc: label,
     body: `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="11" fill="${C.bgA}" stroke="${C.line2}"/>

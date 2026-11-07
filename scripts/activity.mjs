@@ -63,7 +63,7 @@ const first = new Date(`${days[0].date}T00:00:00Z`);
 const firstDow = first.getUTCDay(); // Sunday = 0, same as GitHub
 const weeks = Math.ceil((days.length + firstDow) / 7);
 const H = gy + 7 * step + 64;
-const shades = ['#121c2f', '#0b3b4b', '#0b6a80', '#12a3bf', '#3fe0f5'];
+const shades = ['#152117', '#25401c', '#3f6b1f', '#6ea22c', '#b5e04a'];
 
 let cells = '', months = '';
 let lastMonth = -1;
@@ -73,7 +73,7 @@ days.forEach((d, i) => {
   const delay = (col * 0.018 + row * 0.04).toFixed(3);
   const isLast = i === days.length - 1;
   cells += `<rect class="c" style="animation-delay:${delay}s" x="${x}" y="${y}" width="${cell}" height="${cell}" rx="3.5" fill="${shades[d.level]}"><title>${esc(`${d.count} on ${d.date}`)}</title></rect>`;
-  if (isLast) cells += `<rect class="today" x="${x - 3}" y="${y - 3}" width="${cell + 6}" height="${cell + 6}" rx="5.5" fill="none" stroke="${C.cyan}" stroke-width="1.6"/>`;
+  if (isLast) cells += `<rect class="today" x="${x - 3}" y="${y - 3}" width="${cell + 6}" height="${cell + 6}" rx="5.5" fill="none" stroke="${C.accent}" stroke-width="1.6"/>`;
   const m = new Date(`${d.date}T00:00:00Z`).getUTCMonth();
   if (row === 0 && m !== lastMonth) {
     if (col < weeks - 2) months += `<text class="m" x="${x}" y="${gy - 12}" font-size="13" fill="${C.mute}">${new Date(`${d.date}T00:00:00Z`).toLocaleDateString('en-GB', { month: 'short', timeZone: 'UTC' })}</text>`;
@@ -129,7 +129,7 @@ const svg = svgDoc({
   style: css,
   defs: `${f.defs}
 <clipPath id="grid"><rect x="${gx - 4}" y="${gy - 4}" width="${weeks * step + 4}" height="${7 * step + 4}"/></clipPath>
-<linearGradient id="scan" x1="0" x2="1"><stop offset="0" stop-color="${C.cyan}" stop-opacity="0"/><stop offset=".85" stop-color="${C.cyan}" stop-opacity=".16"/><stop offset="1" stop-color="${C.cyan}" stop-opacity="0"/></linearGradient>`,
+<linearGradient id="scan" x1="0" x2="1"><stop offset="0" stop-color="${C.accent}" stop-opacity="0"/><stop offset=".85" stop-color="${C.accent}" stop-opacity=".16"/><stop offset="1" stop-color="${C.accent}" stop-opacity="0"/></linearGradient>`,
   body,
 });
 

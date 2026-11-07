@@ -10,87 +10,87 @@
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}
 </style>
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1322"/><stop offset="1" stop-color="#060a12"/></linearGradient>
-<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#1d2b44"/></pattern>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101a12"/><stop offset="1" stop-color="#080c09"/></linearGradient>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#1f2f22"/></pattern>
 <radialGradient id="dotfade" cx=".85" cy=".1" r="1"><stop offset="0" stop-color="#fff"/><stop offset=".75" stop-color="#fff" stop-opacity="0"/></radialGradient>
 <mask id="dotmask"><rect width="1200" height="720" fill="url(#dotfade)"/></mask>
-<radialGradient id="glow"><stop offset="0" stop-color="#22d3ee" stop-opacity=".16"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
-<clipPath id="card"><rect width="1200" height="720" rx="20"/></clipPath><clipPath id="tile0"><rect x="48" y="118" width="208" height="150" rx="14"/></clipPath><clipPath id="tile1"><rect x="272" y="118" width="208" height="150" rx="14"/></clipPath><clipPath id="tile2"><rect x="496" y="118" width="208" height="150" rx="14"/></clipPath><clipPath id="tile3"><rect x="720" y="118" width="208" height="150" rx="14"/></clipPath><clipPath id="tile4"><rect x="944" y="118" width="208" height="150" rx="14"/></clipPath><linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#bff6ff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+<radialGradient id="glow"><stop offset="0" stop-color="#9bcc3f" stop-opacity=".16"/><stop offset="1" stop-color="#9bcc3f" stop-opacity="0"/></radialGradient>
+<clipPath id="card"><rect width="1200" height="720" rx="20"/></clipPath><clipPath id="tile0"><rect x="48" y="118" width="208" height="150" rx="14"/></clipPath><clipPath id="tile1"><rect x="272" y="118" width="208" height="150" rx="14"/></clipPath><clipPath id="tile2"><rect x="496" y="118" width="208" height="150" rx="14"/></clipPath><clipPath id="tile3"><rect x="720" y="118" width="208" height="150" rx="14"/></clipPath><clipPath id="tile4"><rect x="944" y="118" width="208" height="150" rx="14"/></clipPath><linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#e6f9b8" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
 <g clip-path="url(#card)">
 <rect width="1200" height="720" fill="url(#bg)"/>
 <rect width="1200" height="720" fill="url(#dots)" mask="url(#dotmask)"/>
 
 </g>
-<rect x=".5" y=".5" width="1199" height="719" rx="19.5" fill="none" stroke="#1a2740"/>
-<line x1="1" y1="56" x2="1199" y2="56" stroke="#1a2740"/>
-<path d="M24 57 V28 a12 12 0 0 1 12 -12 H150.8 a12 12 0 0 1 12 12 V57 Z" fill="#0f1a2e" stroke="#1a2740"/>
-<rect x="25" y="55" width="136.8" height="3" fill="#0f1a2e"/>
-<rect x="35" y="28" width="18" height="18" rx="4" fill="none" stroke="#22d3ee" stroke-width="1.6"/><text class="m" x="51" y="43" font-size="8.5" font-weight="700" fill="#22d3ee" text-anchor="end">TS</text>
-<text class="m" x="62" y="42" font-size="16" textLength="76.8" lengthAdjust="spacing" fill="#a3b1c6">stack.ts</text>
-<text class="m" x="1172" y="42" font-size="15" fill="#66768d" text-anchor="end">// specialization first, then everything else</text>
-<rect x="48" y="86" width="3" height="18" fill="#22d3ee"/>
-<text class="m" x="62" y="101" font-size="15" fill="#22d3ee" letter-spacing="3">SPECIALIZATION</text>
-<rect x="48" y="118" width="208" height="150" rx="14" fill="#0c1424" stroke="#26364f"/>
+<rect x=".5" y=".5" width="1199" height="719" rx="19.5" fill="none" stroke="#1d2b1f"/>
+<line x1="1" y1="56" x2="1199" y2="56" stroke="#1d2b1f"/>
+<path d="M24 57 V28 a12 12 0 0 1 12 -12 H150.8 a12 12 0 0 1 12 12 V57 Z" fill="#132016" stroke="#1d2b1f"/>
+<rect x="25" y="55" width="136.8" height="3" fill="#132016"/>
+<rect x="35" y="28" width="18" height="18" rx="4" fill="none" stroke="#9bcc3f" stroke-width="1.6"/><text class="m" x="51" y="43" font-size="8.5" font-weight="700" fill="#9bcc3f" text-anchor="end">TS</text>
+<text class="m" x="62" y="42" font-size="16" textLength="76.8" lengthAdjust="spacing" fill="#aebba8">stack.ts</text>
+<text class="m" x="1172" y="42" font-size="15" fill="#6f8069" text-anchor="end">// specialization first, then everything else</text>
+<rect x="48" y="86" width="3" height="18" fill="#9bcc3f"/>
+<text class="m" x="62" y="101" font-size="15" fill="#9bcc3f" letter-spacing="3">SPECIALIZATION</text>
+<rect x="48" y="118" width="208" height="150" rx="14" fill="#0f1811" stroke="#2b3e2d"/>
 <g clip-path="url(#tile0)"><rect class="sheen sh0" x="-112" y="98" width="120" height="190" fill="url(#sheen)" transform="skewX(-18)"/></g>
-<rect x="70" y="140" width="48" height="48" rx="11" fill="#22d3ee" fill-opacity=".07" stroke="#22d3ee" stroke-opacity=".28"/>
-<rect x="80" y="150" width="28" height="28" rx="5" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><text class="m" x="105" y="174" font-size="13" font-weight="700" fill="#22d3ee" text-anchor="end">TS</text>
-<text class="s" x="70" y="222" font-size="23" fill="#e8eef7" font-weight="650">TypeScript</text>
-<text class="m" x="70" y="249" font-size="14" textLength="134.4" lengthAdjust="spacing" fill="#66768d">primary language</text><rect x="272" y="118" width="208" height="150" rx="14" fill="#0c1424" stroke="#26364f"/>
+<rect x="70" y="140" width="48" height="48" rx="11" fill="#9bcc3f" fill-opacity=".07" stroke="#9bcc3f" stroke-opacity=".28"/>
+<rect x="80" y="150" width="28" height="28" rx="5" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><text class="m" x="105" y="174" font-size="13" font-weight="700" fill="#9bcc3f" text-anchor="end">TS</text>
+<text class="s" x="70" y="222" font-size="23" fill="#eef5e9" font-weight="650">TypeScript</text>
+<text class="m" x="70" y="249" font-size="14" textLength="134.4" lengthAdjust="spacing" fill="#6f8069">primary language</text><rect x="272" y="118" width="208" height="150" rx="14" fill="#0f1811" stroke="#2b3e2d"/>
 <g clip-path="url(#tile1)"><rect class="sheen sh1" x="112" y="98" width="120" height="190" fill="url(#sheen)" transform="skewX(-18)"/></g>
-<rect x="294" y="140" width="48" height="48" rx="11" fill="#22d3ee" fill-opacity=".07" stroke="#22d3ee" stroke-opacity=".28"/>
-<rect x="307" y="147" width="22" height="34" rx="5" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><path d="M315 176.5 h6" stroke="#22d3ee" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="318" cy="162" rx="7.5" ry="2.9" transform="rotate(0 318 162)" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="318" cy="162" rx="7.5" ry="2.9" transform="rotate(60 318 162)" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="318" cy="162" rx="7.5" ry="2.9" transform="rotate(120 318 162)" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><circle cx="318" cy="162" r="1.25" fill="#22d3ee"/>
-<text class="s" x="294" y="222" font-size="23" fill="#e8eef7" font-weight="650">React Native</text>
-<text class="m" x="294" y="249" font-size="14" textLength="151.2" lengthAdjust="spacing" fill="#66768d">iOS + Android apps</text><rect x="496" y="118" width="208" height="150" rx="14" fill="#0c1424" stroke="#26364f"/>
+<rect x="294" y="140" width="48" height="48" rx="11" fill="#9bcc3f" fill-opacity=".07" stroke="#9bcc3f" stroke-opacity=".28"/>
+<rect x="307" y="147" width="22" height="34" rx="5" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><path d="M315 176.5 h6" stroke="#9bcc3f" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="318" cy="162" rx="7.5" ry="2.9" transform="rotate(0 318 162)" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="318" cy="162" rx="7.5" ry="2.9" transform="rotate(60 318 162)" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="318" cy="162" rx="7.5" ry="2.9" transform="rotate(120 318 162)" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><circle cx="318" cy="162" r="1.25" fill="#9bcc3f"/>
+<text class="s" x="294" y="222" font-size="23" fill="#eef5e9" font-weight="650">React Native</text>
+<text class="m" x="294" y="249" font-size="14" textLength="151.2" lengthAdjust="spacing" fill="#6f8069">iOS + Android apps</text><rect x="496" y="118" width="208" height="150" rx="14" fill="#0f1811" stroke="#2b3e2d"/>
 <g clip-path="url(#tile2)"><rect class="sheen sh2" x="336" y="98" width="120" height="190" fill="url(#sheen)" transform="skewX(-18)"/></g>
-<rect x="518" y="140" width="48" height="48" rx="11" fill="#22d3ee" fill-opacity=".07" stroke="#22d3ee" stroke-opacity=".28"/>
-<path d="M542 150 L557 158 L542 166 L527 158 Z" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><path d="M527 164 L542 172 L557 164" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><path d="M527 170 L542 178 L557 170" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/>
-<text class="s" x="518" y="222" font-size="23" fill="#e8eef7" font-weight="650">Expo</text>
-<text class="m" x="518" y="249" font-size="14" textLength="168" lengthAdjust="spacing" fill="#66768d">SDK · Router · media</text><rect x="720" y="118" width="208" height="150" rx="14" fill="#0c1424" stroke="#26364f"/>
+<rect x="518" y="140" width="48" height="48" rx="11" fill="#9bcc3f" fill-opacity=".07" stroke="#9bcc3f" stroke-opacity=".28"/>
+<path d="M542 150 L557 158 L542 166 L527 158 Z" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><path d="M527 164 L542 172 L557 164" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><path d="M527 170 L542 178 L557 170" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/>
+<text class="s" x="518" y="222" font-size="23" fill="#eef5e9" font-weight="650">Expo</text>
+<text class="m" x="518" y="249" font-size="14" textLength="168" lengthAdjust="spacing" fill="#6f8069">SDK · Router · media</text><rect x="720" y="118" width="208" height="150" rx="14" fill="#0f1811" stroke="#2b3e2d"/>
 <g clip-path="url(#tile3)"><rect class="sheen sh3" x="560" y="98" width="120" height="190" fill="url(#sheen)" transform="skewX(-18)"/></g>
-<rect x="742" y="140" width="48" height="48" rx="11" fill="#22d3ee" fill-opacity=".07" stroke="#22d3ee" stroke-opacity=".28"/>
-<ellipse cx="766" cy="164" rx="16" ry="6.2" transform="rotate(0 766 164)" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="766" cy="164" rx="16" ry="6.2" transform="rotate(60 766 164)" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="766" cy="164" rx="16" ry="6.2" transform="rotate(120 766 164)" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><circle cx="766" cy="164" r="2.6666666666666665" fill="#22d3ee"/>
-<text class="s" x="742" y="222" font-size="23" fill="#e8eef7" font-weight="650">React</text>
-<text class="m" x="742" y="249" font-size="14" textLength="142.8" lengthAdjust="spacing" fill="#66768d">component systems</text><rect x="944" y="118" width="208" height="150" rx="14" fill="#0c1424" stroke="#26364f"/>
+<rect x="742" y="140" width="48" height="48" rx="11" fill="#9bcc3f" fill-opacity=".07" stroke="#9bcc3f" stroke-opacity=".28"/>
+<ellipse cx="766" cy="164" rx="16" ry="6.2" transform="rotate(0 766 164)" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="766" cy="164" rx="16" ry="6.2" transform="rotate(60 766 164)" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="766" cy="164" rx="16" ry="6.2" transform="rotate(120 766 164)" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><circle cx="766" cy="164" r="2.6666666666666665" fill="#9bcc3f"/>
+<text class="s" x="742" y="222" font-size="23" fill="#eef5e9" font-weight="650">React</text>
+<text class="m" x="742" y="249" font-size="14" textLength="142.8" lengthAdjust="spacing" fill="#6f8069">component systems</text><rect x="944" y="118" width="208" height="150" rx="14" fill="#0f1811" stroke="#2b3e2d"/>
 <g clip-path="url(#tile4)"><rect class="sheen sh4" x="784" y="98" width="120" height="190" fill="url(#sheen)" transform="skewX(-18)"/></g>
-<rect x="966" y="140" width="48" height="48" rx="11" fill="#22d3ee" fill-opacity=".07" stroke="#22d3ee" stroke-opacity=".28"/>
-<path d="M990 148 L1004 156 V172 L990 180 L976 172 V156 Z" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-linejoin="round"/><text class="m" x="990" y="169" font-size="12" font-weight="700" fill="#22d3ee" text-anchor="middle">js</text>
-<text class="s" x="966" y="222" font-size="23" fill="#e8eef7" font-weight="650">Node.js</text>
-<text class="m" x="966" y="249" font-size="14" textLength="168" lengthAdjust="spacing" fill="#66768d">services · REST APIs</text>
-<rect x="48" y="292" width="3" height="18" fill="#66768d"/>
-<text class="m" x="62" y="307" font-size="15" fill="#a3b1c6" letter-spacing="3">ALSO IN THE TOOLBOX</text>
-<text class="m" x="48" y="344" font-size="14" fill="#66768d" letter-spacing="2.4">MOBILE</text><rect x="300" y="322" width="133.6" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="314" y="344.5" font-size="16" textLength="105.6" lengthAdjust="spacing" fill="#c9d4e3">Expo Router</text><rect x="443.6" y="322" width="124" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="457.6" y="344.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#c9d4e3">Reanimated</text><rect x="577.6" y="322" width="66.4" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="591.6" y="344.5" font-size="16" textLength="38.4" lengthAdjust="spacing" fill="#c9d4e3">Skia</text><rect x="654" y="322" width="181.6" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="668" y="344.5" font-size="16" textLength="153.6" lengthAdjust="spacing" fill="#c9d4e3">react-native-svg</text><rect x="845.6" y="322" width="124" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="859.6" y="344.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#c9d4e3">Expo Image</text><rect x="979.6" y="322" width="124" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="993.6" y="344.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#c9d4e3">Expo Video</text><rect x="300" y="368" width="85.6" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="314" y="390.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#c9d4e3">Hermes</text><rect x="395.6" y="368" width="56.8" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="409.6" y="390.5" font-size="16" textLength="28.8" lengthAdjust="spacing" fill="#c9d4e3">iOS</text><rect x="462.40000000000003" y="368" width="95.2" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="476.4" y="390.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#c9d4e3">Android</text><text class="m" x="48" y="442" font-size="14" fill="#66768d" letter-spacing="2.4">WEB</text><rect x="300" y="420" width="95.2" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="314" y="442.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#c9d4e3">Next.js</text><rect x="405.2" y="420" width="124" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="419.2" y="442.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#c9d4e3">JavaScript</text><rect x="539.2" y="420" width="124" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="553.2" y="442.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#c9d4e3">HTML / CSS</text><rect x="673.2" y="420" width="95.2" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="687.2" y="442.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#c9d4e3">Zustand</text><rect x="778.4000000000001" y="420" width="152.8" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="792.4" y="442.5" font-size="16" textLength="124.8" lengthAdjust="spacing" fill="#c9d4e3">React Context</text><rect x="941.2" y="420" width="56.8" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="955.2" y="442.5" font-size="16" textLength="28.8" lengthAdjust="spacing" fill="#c9d4e3">SWR</text><text class="m" x="48" y="494" font-size="14" fill="#66768d" letter-spacing="2.4">BACKEND &amp; DATA</text><rect x="300" y="472" width="95.2" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="314" y="494.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#c9d4e3">Fastify</text><rect x="405.2" y="472" width="114.4" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="419.2" y="494.5" font-size="16" textLength="86.4" lengthAdjust="spacing" fill="#c9d4e3">REST APIs</text><rect x="529.6" y="472" width="56.8" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="543.6" y="494.5" font-size="16" textLength="28.8" lengthAdjust="spacing" fill="#c9d4e3">SQL</text><rect x="596.4" y="472" width="95.2" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="610.4" y="494.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#c9d4e3">MongoDB</text><rect x="701.6" y="472" width="85.6" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="715.6" y="494.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#c9d4e3">Prisma</text><rect x="797.2" y="472" width="133.6" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="811.2" y="494.5" font-size="16" textLength="105.6" lengthAdjust="spacing" fill="#c9d4e3">Drizzle ORM</text><rect x="940.8000000000001" y="472" width="85.6" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="954.8" y="494.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#c9d4e3">SQLite</text><text class="m" x="48" y="546" font-size="14" fill="#66768d" letter-spacing="2.4">TOOLING</text><rect x="300" y="524" width="56.8" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="314" y="546.5" font-size="16" textLength="28.8" lengthAdjust="spacing" fill="#c9d4e3">Git</text><rect x="366.8" y="524" width="85.6" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="380.8" y="546.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#c9d4e3">GitHub</text><rect x="462.4" y="524" width="76" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="476.4" y="546.5" font-size="16" textLength="48" lengthAdjust="spacing" fill="#c9d4e3">Linux</text><rect x="548.4" y="524" width="85.6" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="562.4" y="546.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#c9d4e3">Docker</text><rect x="644" y="524" width="95.2" height="34" rx="8" fill="#0c1424" stroke="#26364f"/>
-<text class="m" x="658" y="546.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#c9d4e3">Cypress</text><line x1="48" y1="564" x2="1152" y2="564" stroke="#1a2740" stroke-dasharray="2 6"/><text class="m" x="48" y="616" font-size="14" fill="#a3b1c6" letter-spacing="2.4">PERSONAL PROJECTS</text><text class="m" x="48" y="638" font-size="13" fill="#66768d">// explored outside work</text><rect x="300" y="594" width="47.2" height="34" rx="8" fill="none" stroke="#66768d" stroke-dasharray="4 4"/>
-<text class="m" x="314" y="616.5" font-size="16" textLength="19.2" lengthAdjust="spacing" fill="#a3b1c6">C#</text><rect x="357.2" y="594" width="200.8" height="34" rx="8" fill="none" stroke="#66768d" stroke-dasharray="4 4"/>
-<text class="m" x="371.2" y="616.5" font-size="16" textLength="172.8" lengthAdjust="spacing" fill="#a3b1c6">CounterStrikeSharp</text><rect x="568" y="594" width="104.8" height="34" rx="8" fill="none" stroke="#66768d" stroke-dasharray="4 4"/>
-<text class="m" x="582" y="616.5" font-size="16" textLength="76.8" lengthAdjust="spacing" fill="#a3b1c6">Electron</text><rect x="682.8" y="594" width="124" height="34" rx="8" fill="none" stroke="#66768d" stroke-dasharray="4 4"/>
-<text class="m" x="696.8" y="616.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#a3b1c6">Discord.js</text><rect x="816.8" y="594" width="124" height="34" rx="8" fill="none" stroke="#66768d" stroke-dasharray="4 4"/>
-<text class="m" x="830.8" y="616.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#a3b1c6">Playwright</text><rect x="950.8" y="594" width="152.8" height="34" rx="8" fill="none" stroke="#66768d" stroke-dasharray="4 4"/>
-<text class="m" x="964.8" y="616.5" font-size="16" textLength="124.8" lengthAdjust="spacing" fill="#a3b1c6">Unreal Engine</text><rect x="300" y="640" width="95.2" height="34" rx="8" fill="none" stroke="#66768d" stroke-dasharray="4 4"/>
-<text class="m" x="314" y="662.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#a3b1c6">Blender</text>
+<rect x="966" y="140" width="48" height="48" rx="11" fill="#9bcc3f" fill-opacity=".07" stroke="#9bcc3f" stroke-opacity=".28"/>
+<path d="M990 148 L1004 156 V172 L990 180 L976 172 V156 Z" fill="none" stroke="#9bcc3f" stroke-width="1.8" stroke-linejoin="round"/><text class="m" x="990" y="169" font-size="12" font-weight="700" fill="#9bcc3f" text-anchor="middle">js</text>
+<text class="s" x="966" y="222" font-size="23" fill="#eef5e9" font-weight="650">Node.js</text>
+<text class="m" x="966" y="249" font-size="14" textLength="168" lengthAdjust="spacing" fill="#6f8069">services · REST APIs</text>
+<rect x="48" y="292" width="3" height="18" fill="#6f8069"/>
+<text class="m" x="62" y="307" font-size="15" fill="#aebba8" letter-spacing="3">ALSO IN THE TOOLBOX</text>
+<text class="m" x="48" y="344" font-size="14" fill="#6f8069" letter-spacing="2.4">MOBILE</text><rect x="300" y="322" width="133.6" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="314" y="344.5" font-size="16" textLength="105.6" lengthAdjust="spacing" fill="#d3ddcd">Expo Router</text><rect x="443.6" y="322" width="124" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="457.6" y="344.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#d3ddcd">Reanimated</text><rect x="577.6" y="322" width="66.4" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="591.6" y="344.5" font-size="16" textLength="38.4" lengthAdjust="spacing" fill="#d3ddcd">Skia</text><rect x="654" y="322" width="181.6" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="668" y="344.5" font-size="16" textLength="153.6" lengthAdjust="spacing" fill="#d3ddcd">react-native-svg</text><rect x="845.6" y="322" width="124" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="859.6" y="344.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#d3ddcd">Expo Image</text><rect x="979.6" y="322" width="124" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="993.6" y="344.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#d3ddcd">Expo Video</text><rect x="300" y="368" width="85.6" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="314" y="390.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#d3ddcd">Hermes</text><rect x="395.6" y="368" width="56.8" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="409.6" y="390.5" font-size="16" textLength="28.8" lengthAdjust="spacing" fill="#d3ddcd">iOS</text><rect x="462.40000000000003" y="368" width="95.2" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="476.4" y="390.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#d3ddcd">Android</text><text class="m" x="48" y="442" font-size="14" fill="#6f8069" letter-spacing="2.4">WEB</text><rect x="300" y="420" width="95.2" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="314" y="442.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#d3ddcd">Next.js</text><rect x="405.2" y="420" width="124" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="419.2" y="442.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#d3ddcd">JavaScript</text><rect x="539.2" y="420" width="124" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="553.2" y="442.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#d3ddcd">HTML / CSS</text><rect x="673.2" y="420" width="95.2" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="687.2" y="442.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#d3ddcd">Zustand</text><rect x="778.4000000000001" y="420" width="152.8" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="792.4" y="442.5" font-size="16" textLength="124.8" lengthAdjust="spacing" fill="#d3ddcd">React Context</text><rect x="941.2" y="420" width="56.8" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="955.2" y="442.5" font-size="16" textLength="28.8" lengthAdjust="spacing" fill="#d3ddcd">SWR</text><text class="m" x="48" y="494" font-size="14" fill="#6f8069" letter-spacing="2.4">BACKEND &amp; DATA</text><rect x="300" y="472" width="95.2" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="314" y="494.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#d3ddcd">Fastify</text><rect x="405.2" y="472" width="114.4" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="419.2" y="494.5" font-size="16" textLength="86.4" lengthAdjust="spacing" fill="#d3ddcd">REST APIs</text><rect x="529.6" y="472" width="56.8" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="543.6" y="494.5" font-size="16" textLength="28.8" lengthAdjust="spacing" fill="#d3ddcd">SQL</text><rect x="596.4" y="472" width="95.2" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="610.4" y="494.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#d3ddcd">MongoDB</text><rect x="701.6" y="472" width="85.6" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="715.6" y="494.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#d3ddcd">Prisma</text><rect x="797.2" y="472" width="133.6" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="811.2" y="494.5" font-size="16" textLength="105.6" lengthAdjust="spacing" fill="#d3ddcd">Drizzle ORM</text><rect x="940.8000000000001" y="472" width="85.6" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="954.8" y="494.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#d3ddcd">SQLite</text><text class="m" x="48" y="546" font-size="14" fill="#6f8069" letter-spacing="2.4">TOOLING</text><rect x="300" y="524" width="56.8" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="314" y="546.5" font-size="16" textLength="28.8" lengthAdjust="spacing" fill="#d3ddcd">Git</text><rect x="366.8" y="524" width="85.6" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="380.8" y="546.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#d3ddcd">GitHub</text><rect x="462.4" y="524" width="76" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="476.4" y="546.5" font-size="16" textLength="48" lengthAdjust="spacing" fill="#d3ddcd">Linux</text><rect x="548.4" y="524" width="85.6" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="562.4" y="546.5" font-size="16" textLength="57.6" lengthAdjust="spacing" fill="#d3ddcd">Docker</text><rect x="644" y="524" width="95.2" height="34" rx="8" fill="#0f1811" stroke="#2b3e2d"/>
+<text class="m" x="658" y="546.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#d3ddcd">Cypress</text><line x1="48" y1="564" x2="1152" y2="564" stroke="#1d2b1f" stroke-dasharray="2 6"/><text class="m" x="48" y="616" font-size="14" fill="#aebba8" letter-spacing="2.4">PERSONAL PROJECTS</text><text class="m" x="48" y="638" font-size="13" fill="#6f8069">// explored outside work</text><rect x="300" y="594" width="47.2" height="34" rx="8" fill="none" stroke="#6f8069" stroke-dasharray="4 4"/>
+<text class="m" x="314" y="616.5" font-size="16" textLength="19.2" lengthAdjust="spacing" fill="#aebba8">C#</text><rect x="357.2" y="594" width="200.8" height="34" rx="8" fill="none" stroke="#6f8069" stroke-dasharray="4 4"/>
+<text class="m" x="371.2" y="616.5" font-size="16" textLength="172.8" lengthAdjust="spacing" fill="#aebba8">CounterStrikeSharp</text><rect x="568" y="594" width="104.8" height="34" rx="8" fill="none" stroke="#6f8069" stroke-dasharray="4 4"/>
+<text class="m" x="582" y="616.5" font-size="16" textLength="76.8" lengthAdjust="spacing" fill="#aebba8">Electron</text><rect x="682.8" y="594" width="124" height="34" rx="8" fill="none" stroke="#6f8069" stroke-dasharray="4 4"/>
+<text class="m" x="696.8" y="616.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#aebba8">Discord.js</text><rect x="816.8" y="594" width="124" height="34" rx="8" fill="none" stroke="#6f8069" stroke-dasharray="4 4"/>
+<text class="m" x="830.8" y="616.5" font-size="16" textLength="96" lengthAdjust="spacing" fill="#aebba8">Playwright</text><rect x="950.8" y="594" width="152.8" height="34" rx="8" fill="none" stroke="#6f8069" stroke-dasharray="4 4"/>
+<text class="m" x="964.8" y="616.5" font-size="16" textLength="124.8" lengthAdjust="spacing" fill="#aebba8">Unreal Engine</text><rect x="300" y="640" width="95.2" height="34" rx="8" fill="none" stroke="#6f8069" stroke-dasharray="4 4"/>
+<text class="m" x="314" y="662.5" font-size="16" textLength="67.2" lengthAdjust="spacing" fill="#aebba8">Blender</text>
 </svg>

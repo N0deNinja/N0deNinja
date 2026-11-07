@@ -14,31 +14,31 @@
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}
 </style>
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1322"/><stop offset="1" stop-color="#060a12"/></linearGradient>
-<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#1d2b44"/></pattern>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101a12"/><stop offset="1" stop-color="#080c09"/></linearGradient>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#1f2f22"/></pattern>
 <radialGradient id="dotfade" cx=".85" cy=".1" r="1"><stop offset="0" stop-color="#fff"/><stop offset=".75" stop-color="#fff" stop-opacity="0"/></radialGradient>
 <mask id="dotmask"><rect width="1200" height="244" fill="url(#dotfade)"/></mask>
-<radialGradient id="glow"><stop offset="0" stop-color="#22d3ee" stop-opacity=".16"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
-<clipPath id="card"><rect width="1200" height="244" rx="20"/></clipPath><linearGradient id="now" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#7df0ff"/></linearGradient></defs>
+<radialGradient id="glow"><stop offset="0" stop-color="#9bcc3f" stop-opacity=".16"/><stop offset="1" stop-color="#9bcc3f" stop-opacity="0"/></radialGradient>
+<clipPath id="card"><rect width="1200" height="244" rx="20"/></clipPath><linearGradient id="now" x1="0" x2="1"><stop offset="0" stop-color="#9bcc3f"/><stop offset="1" stop-color="#d6f28e"/></linearGradient></defs>
 <g clip-path="url(#card)">
 <rect width="1200" height="244" fill="url(#bg)"/>
 <rect width="1200" height="244" fill="url(#dots)" mask="url(#dotmask)"/>
 
 </g>
-<rect x=".5" y=".5" width="1199" height="243" rx="19.5" fill="none" stroke="#1a2740"/>
-<line x1="1" y1="56" x2="1199" y2="56" stroke="#1a2740"/>
-<path d="M24 57 V28 a12 12 0 0 1 12 -12 H170 a12 12 0 0 1 12 12 V57 Z" fill="#0f1a2e" stroke="#1a2740"/>
-<rect x="25" y="55" width="156" height="3" fill="#0f1a2e"/>
-<path d="M36 32 h16 M36 37 h11 M36 42 h14" stroke="#22d3ee" stroke-width="1.8" stroke-linecap="round"/>
-<text class="m" x="62" y="42" font-size="16" textLength="96" lengthAdjust="spacing" fill="#a3b1c6">career.log</text>
-<text class="m" x="1172" y="42" font-size="15" fill="#66768d" text-anchor="end">// since 2021</text>
-<rect class="seg" style="animation-delay:0.25s" x="109.3" y="126" width="119.7" height="12" rx="6" fill="#22d3ee" fill-opacity="0.35"/><g class="lab" style="animation-delay:0.25s"><text class="s" x="109.3" y="110" font-size="18" fill="#e8eef7" font-weight="650">Onlio</text><text class="m" x="109.3" y="164" font-size="14" textLength="84" lengthAdjust="spacing" fill="#66768d">React · QA</text></g><rect class="seg" style="animation-delay:0.47s" x="308.7" y="126" width="119.6" height="12" rx="6" fill="#a3b1c6" fill-opacity="0.3"/><g class="lab" style="animation-delay:0.47s"><text class="s" x="308.7" y="110" font-size="18" fill="#e8eef7" font-weight="650">Fortuna</text><text class="m" x="308.7" y="164" font-size="14" textLength="58.8" lengthAdjust="spacing" fill="#66768d">MarTech</text></g><rect class="seg" style="animation-delay:0.69s" x="431.3" y="126" width="349.7" height="12" rx="6" fill="#22d3ee" fill-opacity="0.55"/><g class="lab" style="animation-delay:0.69s"><text class="s" x="431.3" y="110" font-size="18" fill="#e8eef7" font-weight="650">Partners Banka</text><text class="m" x="431.3" y="164" font-size="14" textLength="176.4" lengthAdjust="spacing" fill="#66768d">Mobile · React Native</text></g><rect class="seg" style="animation-delay:0.91s" x="784" y="126" width="257.7" height="12" rx="6" fill="#22d3ee" fill-opacity="0.78"/><g class="lab" style="animation-delay:0.91s"><text class="s" x="784" y="110" font-size="18" fill="#e8eef7" font-weight="650">Piletilevi PLG</text><text class="m" x="784" y="164" font-size="14" textLength="100.8" lengthAdjust="spacing" fill="#66768d">React Native</text></g><rect class="seg" style="animation-delay:1.13s" x="1044.7" y="126" width="80.1" height="12" rx="6" fill="url(#now)" fill-opacity="1"/><g class="lab" style="animation-delay:1.13s"><text class="m" x="1130.8" y="164" font-size="14" fill="#a5f3fc" text-anchor="end">Senior Full-Stack</text></g><line x1="48" y1="196" x2="1152" y2="196" stroke="#1a2740"/><line x1="48" y1="192" x2="48" y2="200" stroke="#26364f"/>
-<text class="m" x="48" y="222" font-size="13" fill="#66768d" text-anchor="start">2021</text><line x1="232" y1="192" x2="232" y2="200" stroke="#26364f"/>
-<text class="m" x="232" y="222" font-size="13" fill="#66768d" text-anchor="middle">2022</text><line x1="416" y1="192" x2="416" y2="200" stroke="#26364f"/>
-<text class="m" x="416" y="222" font-size="13" fill="#66768d" text-anchor="middle">2023</text><line x1="600" y1="192" x2="600" y2="200" stroke="#26364f"/>
-<text class="m" x="600" y="222" font-size="13" fill="#66768d" text-anchor="middle">2024</text><line x1="784" y1="192" x2="784" y2="200" stroke="#26364f"/>
-<text class="m" x="784" y="222" font-size="13" fill="#66768d" text-anchor="middle">2025</text><line x1="968" y1="192" x2="968" y2="200" stroke="#26364f"/>
-<text class="m" x="968" y="222" font-size="13" fill="#66768d" text-anchor="middle">2026</text><line x1="1152" y1="192" x2="1152" y2="200" stroke="#26364f"/>
-<text class="m" x="1152" y="222" font-size="13" fill="#66768d" text-anchor="end">2027</text><circle class="pulse" cx="1124.8" cy="132" r="11" fill="none" stroke="#22d3ee" stroke-width="2"/>
+<rect x=".5" y=".5" width="1199" height="243" rx="19.5" fill="none" stroke="#1d2b1f"/>
+<line x1="1" y1="56" x2="1199" y2="56" stroke="#1d2b1f"/>
+<path d="M24 57 V28 a12 12 0 0 1 12 -12 H170 a12 12 0 0 1 12 12 V57 Z" fill="#132016" stroke="#1d2b1f"/>
+<rect x="25" y="55" width="156" height="3" fill="#132016"/>
+<path d="M36 32 h16 M36 37 h11 M36 42 h14" stroke="#9bcc3f" stroke-width="1.8" stroke-linecap="round"/>
+<text class="m" x="62" y="42" font-size="16" textLength="96" lengthAdjust="spacing" fill="#aebba8">career.log</text>
+<text class="m" x="1172" y="42" font-size="15" fill="#6f8069" text-anchor="end">// since 2021</text>
+<rect class="seg" style="animation-delay:0.25s" x="109.3" y="126" width="119.7" height="12" rx="6" fill="#9bcc3f" fill-opacity="0.35"/><g class="lab" style="animation-delay:0.25s"><text class="s" x="109.3" y="110" font-size="18" fill="#eef5e9" font-weight="650">Onlio</text><text class="m" x="109.3" y="164" font-size="14" textLength="84" lengthAdjust="spacing" fill="#6f8069">React · QA</text></g><rect class="seg" style="animation-delay:0.47s" x="308.7" y="126" width="119.6" height="12" rx="6" fill="#aebba8" fill-opacity="0.3"/><g class="lab" style="animation-delay:0.47s"><text class="s" x="308.7" y="110" font-size="18" fill="#eef5e9" font-weight="650">Fortuna</text><text class="m" x="308.7" y="164" font-size="14" textLength="58.8" lengthAdjust="spacing" fill="#6f8069">MarTech</text></g><rect class="seg" style="animation-delay:0.69s" x="431.3" y="126" width="349.7" height="12" rx="6" fill="#9bcc3f" fill-opacity="0.55"/><g class="lab" style="animation-delay:0.69s"><text class="s" x="431.3" y="110" font-size="18" fill="#eef5e9" font-weight="650">Partners Banka</text><text class="m" x="431.3" y="164" font-size="14" textLength="176.4" lengthAdjust="spacing" fill="#6f8069">Mobile · React Native</text></g><rect class="seg" style="animation-delay:0.91s" x="784" y="126" width="257.7" height="12" rx="6" fill="#9bcc3f" fill-opacity="0.78"/><g class="lab" style="animation-delay:0.91s"><text class="s" x="784" y="110" font-size="18" fill="#eef5e9" font-weight="650">Piletilevi PLG</text><text class="m" x="784" y="164" font-size="14" textLength="100.8" lengthAdjust="spacing" fill="#6f8069">React Native</text></g><rect class="seg" style="animation-delay:1.13s" x="1044.7" y="126" width="80.1" height="12" rx="6" fill="url(#now)" fill-opacity="1"/><g class="lab" style="animation-delay:1.13s"><text class="m" x="1130.8" y="164" font-size="14" fill="#d6f28e" text-anchor="end">Senior Full-Stack</text></g><line x1="48" y1="196" x2="1152" y2="196" stroke="#1d2b1f"/><line x1="48" y1="192" x2="48" y2="200" stroke="#2b3e2d"/>
+<text class="m" x="48" y="222" font-size="13" fill="#6f8069" text-anchor="start">2021</text><line x1="232" y1="192" x2="232" y2="200" stroke="#2b3e2d"/>
+<text class="m" x="232" y="222" font-size="13" fill="#6f8069" text-anchor="middle">2022</text><line x1="416" y1="192" x2="416" y2="200" stroke="#2b3e2d"/>
+<text class="m" x="416" y="222" font-size="13" fill="#6f8069" text-anchor="middle">2023</text><line x1="600" y1="192" x2="600" y2="200" stroke="#2b3e2d"/>
+<text class="m" x="600" y="222" font-size="13" fill="#6f8069" text-anchor="middle">2024</text><line x1="784" y1="192" x2="784" y2="200" stroke="#2b3e2d"/>
+<text class="m" x="784" y="222" font-size="13" fill="#6f8069" text-anchor="middle">2025</text><line x1="968" y1="192" x2="968" y2="200" stroke="#2b3e2d"/>
+<text class="m" x="968" y="222" font-size="13" fill="#6f8069" text-anchor="middle">2026</text><line x1="1152" y1="192" x2="1152" y2="200" stroke="#2b3e2d"/>
+<text class="m" x="1152" y="222" font-size="13" fill="#6f8069" text-anchor="end">2027</text><circle class="pulse" cx="1124.8" cy="132" r="11" fill="none" stroke="#9bcc3f" stroke-width="2"/>
 <circle cx="1124.8" cy="132" r="5" fill="#ffffff"/>
 </svg>

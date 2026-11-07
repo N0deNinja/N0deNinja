@@ -12,51 +12,51 @@
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}
 </style>
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1322"/><stop offset="1" stop-color="#060a12"/></linearGradient>
-<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#1d2b44"/></pattern>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101a12"/><stop offset="1" stop-color="#080c09"/></linearGradient>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#1f2f22"/></pattern>
 <radialGradient id="dotfade" cx=".85" cy=".1" r="1"><stop offset="0" stop-color="#fff"/><stop offset=".75" stop-color="#fff" stop-opacity="0"/></radialGradient>
 <mask id="dotmask"><rect width="1200" height="316" fill="url(#dotfade)"/></mask>
-<radialGradient id="glow"><stop offset="0" stop-color="#22d3ee" stop-opacity=".16"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#9bcc3f" stop-opacity=".16"/><stop offset="1" stop-color="#9bcc3f" stop-opacity="0"/></radialGradient>
 <clipPath id="card"><rect width="1200" height="316" rx="20"/></clipPath></defs>
 <g clip-path="url(#card)">
 <rect width="1200" height="316" fill="url(#bg)"/>
 <rect width="1200" height="316" fill="url(#dots)" mask="url(#dotmask)"/>
 
 </g>
-<rect x=".5" y=".5" width="1199" height="315" rx="19.5" fill="none" stroke="#1a2740"/>
-<line x1="1" y1="56" x2="1199" y2="56" stroke="#1a2740"/>
-<path d="M24 57 V28 a12 12 0 0 1 12 -12 H160.4 a12 12 0 0 1 12 12 V57 Z" fill="#0f1a2e" stroke="#1a2740"/>
-<rect x="25" y="55" width="146.4" height="3" fill="#0f1a2e"/>
-<rect x="34" y="30" width="20" height="14" rx="3" fill="none" stroke="#22d3ee" stroke-width="1.6"/><path d="M38 40 v-6 l3 3 l3 -3 v6" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linejoin="round"/>
-<text class="m" x="62" y="42" font-size="16" textLength="86.4" lengthAdjust="spacing" fill="#a3b1c6">agents.md</text>
-<text class="m" x="1172" y="42" font-size="15" fill="#66768d" text-anchor="end">// AI as a multiplier, not a substitute</text>
-<rect x="48" y="104" width="160" height="78" rx="12" fill="#0c1424" stroke="#26364f"/>
-<rect class="hl n0" x="48" y="104" width="160" height="78" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee"/>
-<text class="m" x="64" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#22d3ee">01</text>
-<text class="s" x="64" y="153" font-size="19" fill="#e8eef7" font-weight="650">Specify</text>
-<text class="m" x="64" y="172" font-size="13" textLength="109.2" lengthAdjust="spacing" fill="#66768d">write the spec</text><path d="M214 143 H228.8" stroke="#26364f" stroke-width="2"/><path d="M222.8 138 L228.8 143 L222.8 148" fill="none" stroke="#26364f" stroke-width="2"/><rect x="236.8" y="104" width="160" height="78" rx="12" fill="#0c1424" stroke="#26364f"/>
-<rect class="hl n1" x="236.8" y="104" width="160" height="78" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee"/>
-<text class="m" x="252.8" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#22d3ee">02</text>
-<text class="s" x="252.8" y="153" font-size="19" fill="#e8eef7" font-weight="650">Understand</text>
-<text class="m" x="252.8" y="172" font-size="13" textLength="109.2" lengthAdjust="spacing" fill="#66768d">map the system</text><path d="M402.8 143 H417.6" stroke="#26364f" stroke-width="2"/><path d="M411.6 138 L417.6 143 L411.6 148" fill="none" stroke="#26364f" stroke-width="2"/><rect x="425.6" y="104" width="160" height="78" rx="12" fill="#0c1424" stroke="#26364f"/>
-<rect class="hl n2" x="425.6" y="104" width="160" height="78" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee"/>
-<text class="m" x="441.6" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#22d3ee">03</text>
-<text class="s" x="441.6" y="153" font-size="19" fill="#e8eef7" font-weight="650">Decompose</text>
-<text class="m" x="441.6" y="172" font-size="13" textLength="117" lengthAdjust="spacing" fill="#66768d">plan the pieces</text><path d="M591.6 143 H606.4" stroke="#26364f" stroke-width="2"/><path d="M600.4 138 L606.4 143 L600.4 148" fill="none" stroke="#26364f" stroke-width="2"/><rect x="614.4000000000001" y="104" width="160" height="78" rx="12" fill="#0c1424" stroke="#26364f"/>
-<rect class="hl n3" x="614.4000000000001" y="104" width="160" height="78" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee"/>
-<text class="m" x="630.4" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#22d3ee">04</text>
-<text class="s" x="630.4" y="153" font-size="19" fill="#e8eef7" font-weight="650">Delegate</text>
-<text class="m" x="630.4" y="172" font-size="13" textLength="124.8" lengthAdjust="spacing" fill="#66768d">agents implement</text><path d="M780.4 143 H795.2" stroke="#26364f" stroke-width="2"/><path d="M789.2 138 L795.2 143 L789.2 148" fill="none" stroke="#26364f" stroke-width="2"/><rect x="803.2" y="104" width="160" height="78" rx="12" fill="#0c1424" stroke="#26364f"/>
-<rect class="hl n4" x="803.2" y="104" width="160" height="78" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee"/>
-<text class="m" x="819.2" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#22d3ee">05</text>
-<text class="s" x="819.2" y="153" font-size="19" fill="#e8eef7" font-weight="650">Review</text>
-<text class="m" x="819.2" y="172" font-size="13" textLength="109.2" lengthAdjust="spacing" fill="#66768d">debug and test</text><path d="M969.2 143 H984" stroke="#26364f" stroke-width="2"/><path d="M978 138 L984 143 L978 148" fill="none" stroke="#26364f" stroke-width="2"/><rect x="992" y="104" width="160" height="78" rx="12" fill="#0c1424" stroke="#26364f"/>
-<rect class="hl n5" x="992" y="104" width="160" height="78" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee"/>
-<text class="m" x="1008" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#22d3ee">06</text>
-<text class="s" x="1008" y="153" font-size="19" fill="#e8eef7" font-weight="650">Integrate</text>
-<text class="m" x="1008" y="172" font-size="13" textLength="124.8" lengthAdjust="spacing" fill="#66768d">validate &amp; merge</text><path d="M883.2 188 C883.2 244 694.4 244 694.4 192" fill="none" stroke="#26364f" stroke-width="2" stroke-dasharray="4 6"/>
-<path d="M688.4 199 L694.4 191 L700.4 199" fill="none" stroke="#26364f" stroke-width="2"/>
-<path class="loop" d="M883.2 188 C883.2 244 694.4 244 694.4 192" fill="none" stroke="#22d3ee" stroke-width="2.4" stroke-dasharray="6 8"/>
-<text class="m" x="788.8" y="254" font-size="14" fill="#a3b1c6" text-anchor="middle">iterate</text>
-<text class="m" x="48" y="286" font-size="15" textLength="738" lengthAdjust="spacing" fill="#66768d">// agents write code fast. I own the spec, the architecture, and whether it works.</text>
+<rect x=".5" y=".5" width="1199" height="315" rx="19.5" fill="none" stroke="#1d2b1f"/>
+<line x1="1" y1="56" x2="1199" y2="56" stroke="#1d2b1f"/>
+<path d="M24 57 V28 a12 12 0 0 1 12 -12 H160.4 a12 12 0 0 1 12 12 V57 Z" fill="#132016" stroke="#1d2b1f"/>
+<rect x="25" y="55" width="146.4" height="3" fill="#132016"/>
+<rect x="34" y="30" width="20" height="14" rx="3" fill="none" stroke="#9bcc3f" stroke-width="1.6"/><path d="M38 40 v-6 l3 3 l3 -3 v6" fill="none" stroke="#9bcc3f" stroke-width="1.4" stroke-linejoin="round"/>
+<text class="m" x="62" y="42" font-size="16" textLength="86.4" lengthAdjust="spacing" fill="#aebba8">agents.md</text>
+<text class="m" x="1172" y="42" font-size="15" fill="#6f8069" text-anchor="end">// AI as a multiplier, not a substitute</text>
+<rect x="48" y="104" width="160" height="78" rx="12" fill="#0f1811" stroke="#2b3e2d"/>
+<rect class="hl n0" x="48" y="104" width="160" height="78" rx="12" fill="#9bcc3f" fill-opacity=".08" stroke="#9bcc3f"/>
+<text class="m" x="64" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#9bcc3f">01</text>
+<text class="s" x="64" y="153" font-size="19" fill="#eef5e9" font-weight="650">Specify</text>
+<text class="m" x="64" y="172" font-size="13" textLength="109.2" lengthAdjust="spacing" fill="#6f8069">write the spec</text><path d="M214 143 H228.8" stroke="#2b3e2d" stroke-width="2"/><path d="M222.8 138 L228.8 143 L222.8 148" fill="none" stroke="#2b3e2d" stroke-width="2"/><rect x="236.8" y="104" width="160" height="78" rx="12" fill="#0f1811" stroke="#2b3e2d"/>
+<rect class="hl n1" x="236.8" y="104" width="160" height="78" rx="12" fill="#9bcc3f" fill-opacity=".08" stroke="#9bcc3f"/>
+<text class="m" x="252.8" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#9bcc3f">02</text>
+<text class="s" x="252.8" y="153" font-size="19" fill="#eef5e9" font-weight="650">Understand</text>
+<text class="m" x="252.8" y="172" font-size="13" textLength="109.2" lengthAdjust="spacing" fill="#6f8069">map the system</text><path d="M402.8 143 H417.6" stroke="#2b3e2d" stroke-width="2"/><path d="M411.6 138 L417.6 143 L411.6 148" fill="none" stroke="#2b3e2d" stroke-width="2"/><rect x="425.6" y="104" width="160" height="78" rx="12" fill="#0f1811" stroke="#2b3e2d"/>
+<rect class="hl n2" x="425.6" y="104" width="160" height="78" rx="12" fill="#9bcc3f" fill-opacity=".08" stroke="#9bcc3f"/>
+<text class="m" x="441.6" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#9bcc3f">03</text>
+<text class="s" x="441.6" y="153" font-size="19" fill="#eef5e9" font-weight="650">Decompose</text>
+<text class="m" x="441.6" y="172" font-size="13" textLength="117" lengthAdjust="spacing" fill="#6f8069">plan the pieces</text><path d="M591.6 143 H606.4" stroke="#2b3e2d" stroke-width="2"/><path d="M600.4 138 L606.4 143 L600.4 148" fill="none" stroke="#2b3e2d" stroke-width="2"/><rect x="614.4000000000001" y="104" width="160" height="78" rx="12" fill="#0f1811" stroke="#2b3e2d"/>
+<rect class="hl n3" x="614.4000000000001" y="104" width="160" height="78" rx="12" fill="#9bcc3f" fill-opacity=".08" stroke="#9bcc3f"/>
+<text class="m" x="630.4" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#9bcc3f">04</text>
+<text class="s" x="630.4" y="153" font-size="19" fill="#eef5e9" font-weight="650">Delegate</text>
+<text class="m" x="630.4" y="172" font-size="13" textLength="124.8" lengthAdjust="spacing" fill="#6f8069">agents implement</text><path d="M780.4 143 H795.2" stroke="#2b3e2d" stroke-width="2"/><path d="M789.2 138 L795.2 143 L789.2 148" fill="none" stroke="#2b3e2d" stroke-width="2"/><rect x="803.2" y="104" width="160" height="78" rx="12" fill="#0f1811" stroke="#2b3e2d"/>
+<rect class="hl n4" x="803.2" y="104" width="160" height="78" rx="12" fill="#9bcc3f" fill-opacity=".08" stroke="#9bcc3f"/>
+<text class="m" x="819.2" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#9bcc3f">05</text>
+<text class="s" x="819.2" y="153" font-size="19" fill="#eef5e9" font-weight="650">Review</text>
+<text class="m" x="819.2" y="172" font-size="13" textLength="109.2" lengthAdjust="spacing" fill="#6f8069">debug and test</text><path d="M969.2 143 H984" stroke="#2b3e2d" stroke-width="2"/><path d="M978 138 L984 143 L978 148" fill="none" stroke="#2b3e2d" stroke-width="2"/><rect x="992" y="104" width="160" height="78" rx="12" fill="#0f1811" stroke="#2b3e2d"/>
+<rect class="hl n5" x="992" y="104" width="160" height="78" rx="12" fill="#9bcc3f" fill-opacity=".08" stroke="#9bcc3f"/>
+<text class="m" x="1008" y="128" font-size="13" textLength="15.6" lengthAdjust="spacing" fill="#9bcc3f">06</text>
+<text class="s" x="1008" y="153" font-size="19" fill="#eef5e9" font-weight="650">Integrate</text>
+<text class="m" x="1008" y="172" font-size="13" textLength="124.8" lengthAdjust="spacing" fill="#6f8069">validate &amp; merge</text><path d="M883.2 188 C883.2 244 694.4 244 694.4 192" fill="none" stroke="#2b3e2d" stroke-width="2" stroke-dasharray="4 6"/>
+<path d="M688.4 199 L694.4 191 L700.4 199" fill="none" stroke="#2b3e2d" stroke-width="2"/>
+<path class="loop" d="M883.2 188 C883.2 244 694.4 244 694.4 192" fill="none" stroke="#9bcc3f" stroke-width="2.4" stroke-dasharray="6 8"/>
+<text class="m" x="788.8" y="254" font-size="14" fill="#aebba8" text-anchor="middle">iterate</text>
+<text class="m" x="48" y="286" font-size="15" textLength="738" lengthAdjust="spacing" fill="#6f8069">// agents write code fast. I own the spec, the architecture, and whether it works.</text>
 </svg>
