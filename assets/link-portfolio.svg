@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="233" height="44" viewBox="0 0 233 44" role="img" aria-labelledby="title desc">
+<title id="title">DVORAKSTUDIO.DEV</title>
+<desc id="desc">DVORAKSTUDIO.DEV</desc>
+<style>
+.s{font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Inter, Roboto, Arial, sans-serif}
+.m{font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs></defs>
+<rect x=".5" y=".5" width="232" height="43" rx="11" fill="#0b1322" stroke="#26364f"/>
+<circle cx="28" cy="22" r="9" fill="none" stroke="#22d3ee" stroke-width="1.7"/><ellipse cx="28" cy="22" rx="4" ry="9" fill="none" stroke="#22d3ee" stroke-width="1.5"/><path d="M19 22 H37" stroke="#22d3ee" stroke-width="1.5"/>
+<text class="m" x="48" y="27" font-size="15" font-weight="700" fill="#e8eef7" letter-spacing="1.2" textLength="163.2" lengthAdjust="spacing">DVORAKSTUDIO.DEV</text>
+</svg>
